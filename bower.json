@@ -1,0 +1,11 @@
+{
+  "name": "Ads",
+  "description": "Bower will handle dependencies",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "angular-sanitize": "^1.6.0"
+  }
+}
