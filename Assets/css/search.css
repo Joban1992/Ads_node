@@ -1,0 +1,124 @@
+.container{
+background: url('../images/patterns.jpg');
+}
+.search-box-local-changes{
+  position:static;
+  text-align:center;
+  background:#fff;
+}
+.search-box-local-changes span{
+  border: 2px solid #545454;
+}
+.search-box-local-changes span input[type=text]{
+  color:black;
+}
+::-webkit-input-placeholder {
+  color: #eee;
+}
+.search-mobile ::-webkit-input-placeholder {
+  color: black;
+}
+
+.search-box-head{
+  text-align:center; 
+  padding:0;
+  padding-bottom: 2px;
+}
+.search-box-head span{
+   text-align:left;
+   display:inline-block;
+   width:100%;
+   padding: 0 0 0 0;
+   border: 2px solid #fff;
+   border-color: transparent transparent transparent transparent;
+   border-radius:3px;
+   position:relative;
+   background: rgb(144, 61, 61);
+}
+.search-box-head span input{
+  //padding: 10px!important;
+  width: 95%;
+  background: transparent;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 3px;
+}
+.search-box-head input[type=text]{
+  padding: 10px;
+  width: 100%;
+  border-color: transparent transparent transparent transparent;
+  font-size:14px;
+  color: #fff;
+  font-weight:bold;
+}
+.search-mobile .search-box-head input[type=text]{
+  color: black;
+  font-size:1.2em;
+}	
+.search-box-head i.search-icon{
+  position: absolute;
+  top: 5px;
+  right: 0;
+  display: inline-block;
+  padding: 10px;
+  cursor:pointer;
+}
+.search-box-head i.search-icon:after{
+  content:url('../images/search.png');
+  float:right;
+}	
+.search-result-container{
+  //background: #f7f7f7;
+  background: url('../images/patterns.jpg');
+}
+.search-desktop{
+  display:none!important;
+}
+.search-mobile{
+  display:block;
+}
+.search-mobile .search-box-head span{
+  border-radius: 0;
+  background: transparent;
+}
+.search-mobile .search-box-head input[type=text]{
+  border-color: transparent transparent black transparent;
+}
+@media only screen and (min-width:601px){
+ .search-mobile{
+   display:none;
+ }
+ .search-desktop{
+   display:inline-block!important;
+ }
+}
+
+@media only screen and (min-width:993px){
+ .search-mobile{
+   display:none;
+ }
+ .search-desktop{
+   display:inline-block!important;
+ }
+
+}
+@media only screen and (min-width:1400px){
+  .search-mobile{
+   display:none;
+ }
+ .search-desktop{
+   display:inline-block!important;
+ }
+
+}
+@media (max-device-width:736px) and (orientation:landscape) {
+	
+}
+
+@media (min-device-width:1024px) and (orientation:landscape) {
+
+
+}
+@media (min-device-width:1024px) and (orientation:landscape) {
+
+}

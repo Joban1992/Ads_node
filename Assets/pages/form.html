@@ -1,0 +1,167 @@
+<div class="form-body">
+<main class="landing-layout"  ng-class="{'landing-layout--open':layoutToggle}">
+ 
+  <div class="landing--above">
+  <div class="row form-container">
+   <div class="scroll-btn btn-left" ng-click="formSlider(false)">
+      <i class="icon ion-android-arrow-dropleft-circle"></i>
+   </div>
+   <div class="scroll-btn btn-right" ng-click="formSlider(true)">
+     <i class="icon ion-android-arrow-dropright-circle"></i>
+   </div>
+   <div class="pagination-container">
+     <ul class="pagination-container-ul">
+	   <li class="active"></li>
+	   <li></li>
+	   <li></li>
+	 </ul>
+   </div>
+   
+  <!-- <div class="row" style="    position: relative;
+    height: 100%;
+    overflow-x: hidden;
+    z-index:10;">-->
+    <a ui-sref="template.home" class="back-btn"><i class="icon ion-log-in"></i> <span class="btn-text">Back</span></a>
+    <div class="col-l12 col-m12 col-s12 form-title">
+	   {{currentFormHeading}}
+	</div>
+	
+	<div class="col-l12 col-m12 col-s12 part1">
+	   <div class="row radio-button-container">
+		 <div class="col-l2 offset-l4 col-m3 offset-m3 col-s8 offset-s2  radio-card" ng-click="formSlider(true)">
+		   <!--<i class="icon ion-android-unlock"></i>-->
+		   <i class="icon ion-android-globe"></i>
+		   Public
+		 </div>
+		 <div class="col-l2 col-m3 col-s8 offset-s2 radio-card radio-card-margin" ng-click="formSlider(true)">
+		   <i class="icon ion-android-lock"></i>
+		   Private
+		 </div>
+	   </div>
+	</div>
+	
+	<div class="col-l12 col-m12 col-s12 part2">
+	   <div class="row">
+		 <div class="col-l4 offset-l2 col-m4 offset-m2 col-s10 offset-s1">
+		   <label for="name">
+		    <input type="text" placeholder="Name">
+			<i class="icon ion-person"></i>
+		   </label>
+		 </div>
+		 <div class="col-l4 col-m4 offset-m0 col-s10 offset-s1" >
+		    <label for="heading">
+		    <input type="text" placeholder="Heading">
+			<i class="icon ion-android-textsms"></i>
+		   </label>
+		 </div>
+		 <div class="col-l8 offset-l2 col-m8 offset-m2 col-s10 offset-s1">
+		    <label for="description">
+		       <textarea placeholder="Description"></textarea>
+			</label>
+		 </div>
+		  <div class="col-l4 offset-l2 col-m4 offset-m2 col-s10 offset-s1">
+		   <label for="link">
+		    <input type="text" placeholder="Link to other website">
+			<i class="icon ion-link"></i>
+		   </label>
+		 </div>
+		 <div class="col-l4 col-m4 offset-m0 col-s10 offset-s1" >
+		    <label for="phone">
+		    <input type="text" placeholder="Phone">
+			<i class="icon ion-ios-telephone"></i>
+		   </label>
+		 </div>
+		 <div class="col-l4 offset-l2 col-m4 offset-m2 col-s10 offset-s1">
+		   <label for="email">
+		    <input type="text" placeholder="Email">
+			<i class="icon ion-email"></i>
+		   </label>
+		 </div>
+		 <div class="col-l4 col-m4 offset-m0 col-s10 offset-s1" >
+		    <label for="website">
+		    <input type="text" placeholder="Website">
+			<i class="icon ion-android-globe"></i>
+		   </label>
+		 </div>
+		 
+	   </div>
+	</div>
+	<div class="col-l12 col-m12 col-s12 part3">
+	   <div class="row radio-button-container">
+		 <div class="col-l2 offset-l4 col-m3 offset-m3 col-s8 offset-s2  radio-card" ng-click="togglePreview()">
+		   <!--<i class="icon ion-android-unlock"></i>-->
+		   <i class="icon ion-eye"></i>
+		   Preview
+		 </div>
+		 <div class="col-l2 col-m3 col-s8 offset-s2 radio-card radio-card-margin" ng-click="getNoti()">
+		   <i class="icon ion-android-add-circle"></i>
+		   Create
+		 </div>
+	   </div>
+	</div>
+	<!--</div>-->
+	
+
+  </div>
+  </div>
+  </section>
+   <div class="landing--beneath" >
+	  <div class="row view-container" style="background:#fff;display:">
+	    <a  ng-click="togglePreview()" class="back-btn" style="color:#531eaa; cursor:pointer;"><i class="icon ion-log-in"></i> <span class="btn-text">Back</span></a>
+	    <div class="col-l12 col-m12 col-s12 view-title">
+	      Preview #1234
+	    </div>
+		    <div class="col-l6 col-m6 col-s12 public-private">
+			  <div class="public" ng-class="{'active':dataFromServer.public}">
+			    <span class="icon-box">
+			      <i class="icon ion-android-globe"></i>
+			    </span>
+			    <strong>Public</strong>
+			 </div>
+			</div>
+			<div class="col-l6 col-m6 col-s12 public-private">
+			  <div class="private" ng-class="{'active':!dataFromServer.public}">
+			    <span class="icon-box">
+			      <i class="icon ion-android-lock"></i>
+			    </span>
+			    <strong>Private</strong>
+			 </div>
+			</div>
+			<div class="col-l6 col-m6 col-s12">
+			  <div class="row mwp-tabs">
+			    <div class="col-l4 col-m4 col-s4 mwp-tab" ng-repeat="tab in mwpTabs track by $index" ng-class="{'active':tab.active}" ng-click="toogleActiveMwpTab(tab)">
+				  {{tab.tabname}}
+				</div>
+				<div class="col-l12 col-m12 col-s12 mwp-tab-info" >
+				   
+				    <div class="row" ng-repeat="(key,val) in activeTab track by $index" ng-if="key!='tabname' && key!='active'"> 
+				     <div class="col-l3 col-m5 col-s5 mwp-info-heading">{{key}}</div>
+					 <div class="col-l9 col-m7 col-s7" ng-if="key!='Description'">{{val}}</div>
+					 <div class="col-l9 col-m7 col-s7 desktop" ng-if="key=='Description'">{{val}}</div>
+					 <div class="col-l9 col-m12 col-s12 mobile" ng-if="key=='Description'">{{val}}</div>
+					</div>
+				   
+				</div>
+			  </div>
+			</div>
+			<div class="col-l6 col-m6 col-s12">
+			  <div class="mpw-img">
+			    
+				<!--<direction-map origin="Gurgaon+Haryana,India" destination="Panipat+Haryana,India"></direction-map>-->
+
+               <direction-map addr="dataFromServer.mapAddress"></direction-map>
+			  </div>
+			</div>
+	  </div>
+   </div>
+   
+   </main>  
+   
+  </div>
+  
+  <!--Menu Ends-->
+  
+	
+	
+
+

@@ -1,0 +1,295 @@
+
+	<header-bar></header-bar>
+	<div class="row desc">
+	   <!--<div style="background:red;height:100%;width:100%;position:absolute;"></div>-->
+	   <div class="col-l12 col-m12 col-s12">
+	      <div class="row">
+		    <div class="col-l12 col-m12 col-s12">
+	          <strong style="font-size:2.2em;"> Whats on your mind</strong>
+		      <br>
+		      <span style="font-size:1.2em;">Search here</span>
+		    </div>
+		  </div>
+	      <!--<div class="row">
+		     <div class="col-l12 col-m12 col-s12" style="text-align:center;">
+		       <span class="sel-pro active"  onclick="changeActive(this,'sel-pro')">CGI</span>
+			   <span class="sel-pro"  onclick="changeActive(this,'sel-pro')">Gold</span>
+		     </div>
+		  </div>--->
+		  <div class="row search-box-new">
+		    <div class="col-l12 col-m12 col-s12"> 
+		       <span>
+			     <search-box></search-box>
+			   </span>
+	        </div>
+		  </div>
+	   </div>
+	</div>
+	<div class="row list-part">
+	    <div class="col-l12 col-m12 col-s12" style="background: #fff;border-bottom: 2px solid #efeeee; background: url(Assets/images/text-bg.png);background-size:contain;">
+		    <div class="tag-line">
+			<style>
+			.avatar-circle{
+				border: 2px solid #cccccc;
+				border-radius: 50%;
+				width: 30px;
+				height: 30px;
+				display: inline-block;
+				padding-top: 5px;
+				
+			}
+			</style>
+		      <span style="position:relative;"><strong class="avatar-circle"><i class="icon ion-heart" style="color:#b71c1c"></i></strong> People are hunting for following categories</span>
+		    </div>
+		</div>
+		
+		<div class="row recent-search">
+	      <div class="col-l3 col-m6 col-s12">
+            <span class="recent-ad1">
+			  <strong>Title</strong>
+			</span>
+	      </div>
+	      <div class="col-l3 col-m6 col-s12">
+            <span class="recent-ad2">
+			  <strong>Title</strong>
+			</span>
+	      </div>
+	      <div class="col-l3 col-m6 col-s12">
+            <span class="recent-ad3">
+			  <strong>Title</strong>
+			</span>
+	      </div>
+		  <div class="col-l3 col-m6 col-s12">
+            <span class="recent-ad1">
+			  <strong>Title</strong>
+			</span>
+	      </div>
+	   </div>
+	    <!--<div class="col-l12 col-m12 col-s12" style="background: #fff;border-bottom: 2px solid #efeeee; background: url(images/text-bg.png);background-size:contain;">
+		    <div class="tag-line">
+		      <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</span>
+		    </div>
+		</div>-->
+		<style>
+		.create-mini-web{
+			background-size: cover;
+			color:#fff;
+			background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#fe604b), color-stop(100%,#f09a39));
+			background: -webkit-linear-gradient(45deg, #fe604b 0%,#f09a39 100%);
+			background: -o-linear-gradient(45deg, #fe604b 0%,#f09a39 100%);
+			background: -ms-linear-gradient(45deg, #fe604b 0%,#f09a39 100%);
+			background: linear-gradient(45deg, #fe604b 0%,#f09a39 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fe604b', endColorstr='#f09a39',GradientType=1 );
+		}
+		.create-mini-web .left-side{
+		  padding-top:25px;
+		  position:relative;
+		}
+		.create-mini-web .left-side a{
+		  color:#fff;
+		  text-decoration:none;
+		}
+		.create-mini-web .left-side strong{
+			font-size: 2.2em;
+			display:block;
+		}
+		.create-mini-web .left-side div{
+		  font-size: 1.4em;
+		}
+		.create-mini-web .right-side{
+		  //padding: 50px 50px 0px 50px;
+		  text-align:center;
+		  position:relative;
+		  height: 310px;
+		   padding-left:0px;
+		
+		}
+		.create-mini-web .right-side img{
+		    width: 100%;
+			height: 100%;
+		}
+		.button{
+			font-size: 1.5em;
+			border: 2px solid #fff;
+			border-radius: 25px;
+			padding: 6px 28px;
+			cursor:pointer;
+			//width: 40%;
+    display: block;
+    text-align: center;
+		}
+		.cover{
+		  position:absolute;
+		  width:100%;
+		  height:100%;
+		  display:block;
+		  top: 0;
+		  left: 0;
+		  padding: 20px 65px 35px 22px;
+		}
+		.tablet-img{
+			height: 222px;
+			background: url(Assets/images/tablet_f.PNG);
+			background-repeat: no-repeat;
+			background-size: contain;
+			position: absolute;
+			bottom: 0px;
+			width:100%;
+		}
+		@media only screen and (min-width:601px){
+		  .create-mini-web .left-side{
+		     padding:33px;
+		   }
+		   .tablet-img{
+		     height: 265px;
+		   }
+		   .create-mini-web .right-side{
+		     padding:0;
+		   }
+		}
+		@media only screen and (max-width:601px) and (orientation: landscape){
+		   .create-mini-web .right-side{
+		     padding:50px;
+		   }
+		}
+		@media only screen and (min-width:993px){
+		  .create-mini-web .left-side{
+		     padding:50px;
+		   }
+		   .tablet-img{
+		     height: 257px;
+		   }
+		   .create-mini-web .right-side{
+		     padding:0;
+		   }
+		}
+		</style>
+		<!--<div class="col-l12 col-m12 col-s12 extra">
+		    <div class="row" style="padding:0 45px">
+			   <div class="col-l12 col-m12 col-s12">
+			   <style>
+			         .extra span{
+					   font-size: 1.2em;
+                        display: block;
+						text-align: center;
+						letter-spacing: 1px;
+						/* height: 43px; */
+						padding: 20px 0;
+					}
+			   </style>
+			     <span>Build your beautiful UI, the way you want it, with Land.io</span>
+			    <img src="Assets/images/mock.png"/>
+				  
+			   </div>
+		      
+
+		    </div>
+		</div>-->
+		<div class="col-l12 col-m12 col-s12 create-mini-web">
+		    <div class="row" style="padding:0 45px">
+			   <div class="col-l6 col-m6 col-s12 left-side">
+			     
+			      <strong>Mini Web</strong>
+			      <div>Cretae your mini web with us. Get it done it few minutes and freely public it with #tag.</div>
+				  <br>
+				  
+				  <a ui-sref="template.form"><span class="button  col-l4 col-m8 col-s12">
+				    <i class="icon ion-android-add" style="padding-right:10px;"></i>
+				    Click
+			      </span>
+				  </a>
+				  
+			   </div>
+		      <div class="col-l6 col-m6 col-s12 right-side">
+			      <div class="tablet-img">
+
+				   <!-- <span class="cover">
+				     <img src="images/tablet_bg.png" style="height: 100%;width:100%;"/>
+				    </span>-->
+				  </div>
+			   </div>
+
+		    </div>
+		</div>
+		<div class="col-l12 col-m12 col-s12 info-blocks">
+		    <div class="row">
+			<style>
+			.info-blocks{
+			  text-align:center;
+			  color:#818a91;
+			  background:#fff;
+			  padding:40px 0 40px 0!important;
+			}
+			.info-blocks [class*="col-"]{
+			   padding:40px 0 40px 0!important;
+			}
+			.info-blocks i{
+			    display: block;
+				width: 90px;
+				height: 90px;
+				margin: 0 auto 20px;
+				font-size: 2.125rem;
+				line-height: 2.5;
+				text-align: center;
+				border: 5px solid #ece9e9;
+				border-radius: 50%;
+				padding: 25px;
+				color:black;
+			}
+			    .info-blocks i::before{
+			     //content: "\f141";
+				}
+				.info-blocks h4{
+				    margin:0;
+                    font-size: 2em;
+					color:black;
+				}
+				.info-blocks h6{
+				    margin: 0;
+                    font-size: 1.2em;
+					line-height: 9px;
+				}
+				.info-blocks h6::after{
+				     display: block;
+					width: 80%;
+					height: 2px;
+					margin: 30px auto 0;
+					content: '';
+					background-color: #ededed;
+				}
+				.info-text{
+				  width:70%;
+				  display:inline-block;
+				  padding-top:10px;
+				  font-size: 1.2em;
+				}
+			</style>
+			  <div class="col-l4 col-m4 col-s12">
+			    <i class="icon ion-heart" ></i>
+				<h4>Free</h4>
+				<h6>Forever and ever</h6>
+				<span class="info-text">Sed risus feugiat fusce eu sit conubia venenatis aliquet nisl cras eu adipiscing ac cras at sem cras per senectus eu parturient quam.</span>
+			  </div>
+			  <div class="col-l4 col-m4 col-s12">
+			    <i class="icon ion-headphone" ></i>
+				<h4>$0</h4>
+				<h6>No nedd to pay</h6>
+				<span class="info-text">Sed risus feugiat fusce eu sit conubia venenatis aliquet nisl cras eu adipiscing ac cras at sem cras per senectus eu parturient quam.</span>
+			  </div>
+			  <div class="col-l4 col-m4 col-s12">
+			    <i class="icon ion-ios-people" ></i>
+				<h4>Public</h4>
+				<h6>Gather more public</h6>
+				<span class="info-text">Sed risus feugiat fusce eu sit conubia venenatis aliquet nisl cras eu adipiscing ac cras at sem cras per senectus eu parturient quam.</span>
+			  </div>
+			</div>
+		</div>
+		
+		 <div class="col-l12 col-m12 col-s12" style="border-bottom: 2px solid #efeeee; background: black;">
+		    <div class="tag-line">
+		      <span style="color:#fff;font-size:1em;">Copyright &#169; Joban/Prem Mini Web Company Ltd.</span>
+		    </div>
+		</div>
+	</div>
+
+

@@ -1,0 +1,215 @@
+.desc{
+  color: #fff;
+  font-size: 16px;
+  padding-top: 40px;
+  padding-bottom: 104px;
+  background: url('../images/bnr3.jpg');
+  background-size: cover;//108%;
+  text-align: center;
+  position: relative;
+}
+.desc .main-title{
+  font-size:30px;
+}
+.desc .main-title{
+    font-size: 15px;
+}
+.tag-line{
+  text-align:center;
+  padding: 10px;
+}
+.tag-line span{
+  text-align: center;
+  display: inline-block;
+  border-radius: 3px;
+  position: relative;
+  color: #3963a0;
+  width:81%;
+  font-size: 1.2em;
+}
+
+.other-option-des{
+  display: block;
+  text-align: center;
+  font-size: 17px;
+  color: #636766;
+  padding-top:11px;
+  background: #fff;
+}
+
+.list-part{
+  background: #f7f7f7;
+}
+.list-part [class*="col-"]{
+  padding:0;
+}
+.list-part .recent-search{
+ clear: both;
+ padding: 10px 10% 10px 10%;
+}
+.list-part .recent-search [class*='col-']{
+	height:150px;
+	padding:2px
+}
+.list-part .recent-search [class*='col-'] span{
+		  width:100%;
+		  height:100%;
+		  display:block;
+		  background:green;
+		  overflow:hidden;
+		  text-align:center;
+		  line-height:20px;
+		  border-radius:2px;
+}
+.list-part .recent-search [class*='col-'] {
+  overflow:hidden;
+}
+.list-part .recent-search [class*='col-'] span{
+  transition: all 0.5s cubic-bezier(0.7,0,0.3,1);
+}
+.list-part .recent-search [class*='col-'] span[class*='recent-'] {
+		 //transform:scale3D(1.2,1.2,1.2);
+}
+.list-part .recent-search [class*='col-'] span.recent-ad1{
+		  background:url('../images/recent/1.png');
+		  background-size:cover;
+}
+.list-part .recent-search [class*='col-'] span.recent-ad2{
+		  background:url('../images/recent/2.png');
+		  background-size:cover;
+}
+.list-part .recent-search [class*='col-'] span.recent-ad3{
+		  background:url('../images/recent/3.png');
+		  background-size:cover;
+}
+.list-part .recent-search [class*='col-'] span strong{
+		  vertical-align: middle;
+		  color: #fff;
+          line-height: 131px;
+          font-size: 1.5em;
+		  display:block;
+		  height:100%;
+		  width:100%;
+		  cursor:pointer;
+		  background: rgba(255,255,255,.3);
+}
+.list-part .recent-search [class*='col-'] span:hover strong{
+		 background:none;
+		 
+}
+.list-part .recent-search [class*='col-'] span[class*='recent-']:hover {
+		 transform:scale3D(1,1,1);
+}
+.btn{
+  padding: 10px;
+  width: 100%;
+  color: #fff;
+  background: #2b6ca4;
+  border: none;
+  border-radius: 3px;
+  border: 2px solid #2b6ca4;
+  font-size: 16px;
+  cursor:pointer;
+}
+.overlay{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.46);
+  z-index: 11;
+  display:none;
+}
+.action-container{
+  position: fixed;
+  width: 100%;
+  height: 215px;
+  bottom: -215px;
+  padding:0;
+  z-index: 12;
+  -webkit-transition:all .2s ease;
+}
+.action-container .action-bar{
+  background: #fafafa;
+  height: 100%;
+  padding: 0;
+}
+.action-container .action-bar span{
+  font-size: 19px;
+  display: block;
+  border-bottom: 1px solid #efeeee;
+  margin: 0;
+  padding: 10px;
+  color:#757575;
+}
+.action-container .action-bar ul{
+  margin: 0;
+  padding: 0px 0px;
+  font-size:19px;
+}
+.action-container .action-bar ul li{
+  padding: 8px 0px;
+  color: #757575;
+  cursor:pointer;
+}
+.action-container .action-bar ul li:hover{
+  background:#efefef;
+}
+.action-container .action-bar ul li i.icon-img{
+  padding: 10px 20px 10px 10px;
+  margin-left: 10px;
+}
+.sel-pro{
+  display: inline-block;
+  border-bottom: 3px solid #fff;//rgba(255, 255, 255, 0.59);
+  padding: 6px 43px;
+  margin: -2px;
+  cursor:pointer;
+  color:#fff//rgba(255, 255, 255, 0.59);
+}
+.sel-pro.active{
+  border-bottom: 3px solid #59b1e0;
+  color:#59b1e0;
+}
+
+
+@media only screen and (min-width:601px){
+.search-container{
+  width: 66.66%
+}
+ul.search-type-selector li{ 
+  width: 48%!important;
+}
+.tag-line span{
+  width: 66%;
+}
+.list-part .recent-search{
+ padding: 10px 17% 10px 17%
+}
+}
+
+@media only screen and (min-width:993px){
+.search-container{
+  width: 66.66%
+}
+ul.search-type-selector li{ 
+  width: 49%!important;
+}
+.tag-line span{
+  width: 66%;
+}
+
+.desc{
+  background-position: 12px -150px;
+}
+.list-part .recent-search{
+ padding: 10px 17% 10px 17%
+}
+}
+@media only screen and (min-width:1400px){
+.desc{
+  background-position: 12px -150px;
+}
+.list-part .recent-search{
+ padding: 10px 17% 10px 17%
+}
+}

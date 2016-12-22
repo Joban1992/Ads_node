@@ -1,0 +1,23 @@
+angular.module("app").config(function($stateProvider, $urlRouterProvider){
+  $stateProvider.state('template',{
+    url:'/template',
+	templateUrl:'Assets/pages/template.html',
+	controller:'templateCntrl'
+  })
+  .state('template.home',{
+    url:'/home',
+	templateUrl:'Assets/pages/home.html',
+	controller:'homeCntrl'
+  })
+  .state('template.search',{
+    url:'/search',
+	templateUrl:'Assets/pages/search.html',
+	controller:'searchCntrl'
+  })
+  .state('template.form',{
+    url:'/form',
+	templateUrl:'Assets/pages/form.html',
+	controller:'formCntrl'
+  })
+  $urlRouterProvider.otherwise('template/home');
+})

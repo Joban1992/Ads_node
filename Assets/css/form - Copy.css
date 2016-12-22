@@ -1,0 +1,645 @@
+.form-body{
+   background: url(../images/menubg.svg) center center no-repeat fixed;
+  background-size: cover;
+  background-size: cover;
+  background-color: #531eaa;
+}
+.form-container{
+  //position: fixed;
+  width: 90%;
+  margin:0 auto;
+  height: 100%;
+
+  z-index: 11;
+  top: 0;
+  transition:all .5s ease;
+  color: #fff;
+  text-align: center;
+  //overflow:auto;
+  overflow:hidden;
+  
+}
+.notification-container{
+  position:fixed;
+  z-index:12;
+  bottom:10px;
+  left:0;
+  width:100%;
+  //display:none;
+  text-align: center;
+  color:#fff;
+}
+.notification-container .notification{
+  background:#f1c40f;
+  display:inline-block;
+  padding:5px;
+  border-radius:5px;
+  border:2px solid #fff;
+  font-size:1em;
+  padding-right:25px;
+  position:relative;
+}
+.notification-container span.avatar-img{
+  position:absolute;
+  left:5px;
+  top:5px;  
+}
+.notification-container span.avatar-img img{
+  float:left;
+}
+.notification-container span.text{
+  font-size:1.2em;
+  float:left;
+  margin-left:5px;
+  padding:0 0 0 30px;
+}
+.notification-container span i{
+  font-size:1.5em;
+  float:left;
+  right:5px;
+  top:8px;
+  position:absolute;
+  cursor:pointer;
+}
+.form-container .form-title{
+  font-size: 2em;
+}
+.form-container .active-left{
+  left:0!important;
+  display:block!important;
+}
+.form-container .deactive-left{
+  left:-100%!important;;
+}
+.form-container .active-right{
+  left:0!important;
+  display:block!important;
+}
+.form-container .deactive-right{
+  left:100%!important;;
+}
+.form-container .part1{
+  display:block;
+  -webkit-transition:all 1s ease;
+  position:absolute;
+  top: 77px;
+}
+.form-container .part3{
+   //display:none;
+  -webkit-transition:all 1s ease;
+  position:absolute;
+  top: 77px;
+  left:100%;
+}
+.form-container .part1 .radio-button-container,.part3 .radio-button-container{
+  margin-top:64px;
+}
+.form-container .part1 .radio-button-container .radio-card,.part3 .radio-button-container .radio-card{
+  background:#28e3cc;
+  color:rgba(255, 255, 255, 0.71);
+  font-size: 2em;
+  border-radius:5px;
+  cursor:pointer;
+}
+.form-container .part1 .radio-button-container .radio-card.radio-card-margin,.part3 .radio-button-container .radio-card.radio-card-margin{
+  margin-top:20px;
+}
+.form-container .part1 .radio-button-container .radio-card:hover,.part3 .radio-button-container .radio-card:hover{
+  color:#fff;
+}
+.form-container .part1 .radio-button-container .radio-card i.icon,.part3 .radio-button-container .radio-card i.icon{
+ display:block;
+ width:100%;
+ font-size:3em;
+}
+
+.form-container  .scroll-btn{
+ position: fixed;
+ font-size:2.5em;
+ cursor:pointer;
+ color:rgba(255, 255, 255, 0.71);
+ z-index:10;
+ z-index:1033;
+}
+.form-container .scroll-btn:hover{
+ color:#fff;
+}
+.form-container .scroll-btn.btn-left{
+  left:10px;
+  top:50%;
+}
+.form-container .scroll-btn.btn-right{
+  right:10px;
+  top:50%;
+}
+.form-container .part2{
+   //display:none;
+   left:100%;
+   //left:0;
+   position:absolute;
+   top: 153px;
+  -webkit-transition:all 1s ease;
+}
+.form-container .part2 label{
+  position:relative;
+}
+.form-container .part2 label i{
+    position: absolute;
+    display: block;
+    top: -14px;
+    right: 2px;
+    color: #fff;
+    background: rgba(89, 28, 182, 0.46);
+    padding: 7.5px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    padding: 12px 13px 13px 15px;
+    font-size: 1.5em;
+	cursor:pointer;
+}
+.form-container .part2 label input[type=text]{
+   color:#591cb6;
+   background:#fff;//#fff;
+   //border-color: transparent transparent transparent transparent;
+   border:2px solid rgba(89, 28, 182, 0.46);
+   padding:10px 50px 10px 10px;
+   border-radius:5px;
+   width:100%;
+   font-size:1em;
+}
+.form-container .part2 label  textarea{
+   height:80px;
+   width:100%;
+   padding:10px;
+   border:2px solid rgba(89, 28, 182, 0.46);
+   background:#fff;
+   color: #591cb6;
+   font-size:1.2em;
+}
+.form-container .part2 ::-webkit-input-placeholder {
+  color: rgba(89, 28, 182, 0.46);
+  font-size:1em;
+}
+.form-container .pagination-container{
+  position:fixed;
+  bottom:10px;
+  width:90%;
+  text-align:center;
+}
+.form-container .pagination-container ul{
+
+}
+.form-container .pagination-container ul li{
+  display:inline-block;
+  background-color:rgba(255, 255, 255, 0.71);
+  padding:5px;
+  border-radius:35%;
+  margin-left:5px;
+  cursor:pointer;
+}
+.form-container .pagination-container ul li.active{
+  background-color:#fff;
+}
+
+.back-btn{
+   position:absolute;
+   color:#fff;
+   left:1px;
+   top:25px;
+   text-decoration:none;
+   font-size:1.2em;
+}
+.back-btn .btn-text{
+  display:none;
+}
+.back-btn i{
+  transform: rotate(-180deg);
+  display: inline-block;
+}
+
+/* ----------- iPhone 4 and 4S ----------- */
+
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+  .form-container .part1 .radio-button-container .radio-card.radio-card-margin, .part3 .radio-button-container .radio-card.radio-card-margin{
+    margin-top:20px;
+  }
+  .form-container .part1 .radio-button-container, .part3 .radio-button-container{
+    margin-top:64px;
+  }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+
+
+/* ----------- iPhone 6 ----------- */
+
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+  .form-container .part1 .radio-button-container .radio-card.radio-card-margin, .part2 .radio-button-container .radio-card.radio-card-margin{
+    margin-top:20px;
+  }
+  .form-container .part1 .radio-button-container, .part3 .radio-button-container{
+    margin-top:80px;
+  }
+  .form-container .part2{
+    top:120px;
+   }
+   .form-container .part2 [class*=col-]{
+      padding:10px;
+   }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+  .form-container .part1 .radio-button-container .radio-card.radio-card-margin, .part3 .radio-button-container .radio-card.radio-card-margin{
+    margin-left:20px;
+	margin-top:0px;
+  }
+  .form-container .part1 .radio-button-container, .part3 .radio-button-container{
+    margin-top:35px;
+  }
+   .form-container .part2{
+    top:50px;
+   }
+   .form-container .part2 [class*=col-]{
+      padding:6px;
+   }
+   .back-btn{
+     font-size:1.8em;
+   }
+}
+
+/* ----------- iPhone 5 and 5S ----------- */
+
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+  .form-container .part1 .radio-button-container .radio-card.radio-card-margin, .part3 .radio-button-container .radio-card.radio-card-margin{
+    margin-top:20px;
+  }
+  .form-container .part1 .radio-button-container, .part3 .radio-button-container{
+    margin-top:34px;
+  }
+  .form-container .part2{
+    top:40px;
+   }
+   .form-container .part2 [class*=col-]{
+      padding:10px;
+   }
+   .back-btn{
+     font-size:1.8em;
+   }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (orientation: landscape) {
+  .form-container .part1 .radio-button-container .radio-card.radio-card-margin, .part3 .radio-button-container .radio-card.radio-card-margin{
+    margin-top:10px;
+	margin-left:85px;
+  }
+  .form-container .part1 .radio-button-container, .part3 .radio-button-container{
+    margin-top:0px;
+  }
+  .form-container .part2{
+    top:40px;
+   }
+   .form-container .part2 [class*=col-]{
+      padding:10px;
+   }
+   .back-btn{
+     font-size:1.8em;
+   }
+}
+
+/* ----------- iPhone 6+ ----------- */
+
+
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+  .form-container .part1 .radio-button-container .radio-card.radio-card-margin, .part3 .radio-button-container .radio-card.radio-card-margin{
+	margin-top:20px;
+  }
+  .form-container .part1 .radio-button-container, .part3 .radio-button-container{
+    margin-top:110px;
+  }
+  .form-container .part2{
+    top:120px;
+   }
+   .form-container .part2 [class*=col-]{
+      padding:10px;
+   }
+   .back-btn{
+     font-size:2em;
+   }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+  .form-container .part1 .radio-button-container .radio-card.radio-card-margin, .part3 .radio-button-container .radio-card.radio-card-margin{
+    margin-left:20px;
+	margin-top:0px;
+  }
+  .form-container .part1 .radio-button-container, .part3 .radio-button-container{
+    margin-top:35px;
+  }
+   .form-container .part2{
+    top:65px;
+   }
+   .form-container .part2 [class*=col-]{
+      padding:5px 10px;
+   }
+   .back-btn{
+     font-size:1.8em;
+   }
+}
+
+/* ----------- Galaxy S5 ----------- */
+
+/* Portrait */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: portrait) {
+  .form-container .part1 .radio-button-container .radio-card.radio-card-margin, .part3 .radio-button-container .radio-card.radio-card-margin{
+	margin-top:20px;
+  }
+  .form-container .part1 .radio-button-container, .part3 .radio-button-container{
+    margin-top:70px;
+  }
+  .form-container .part2{
+     top: 47px;
+   }
+   .form-container .part2 [class*=col-]{
+      padding:10px;
+   }
+   .back-btn{
+     font-size:1.8em;
+   }
+}
+
+/* Landscape */
+/* Not working */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: landscape) {
+  .form-container .part1 .radio-button-container .radio-card.radio-card-margin, .part3 .radio-button-container .radio-card.radio-card-margin{
+	margin-top:20px;
+  }
+  .form-container .part1 .radio-button-container, .part3 .radio-button-container{
+    margin-top:60px;
+  }
+  .form-container .part2{
+    top:70px;
+   }
+   .form-container .part2 [class*=col-]{
+      padding:10px;
+   }
+}
+
+/* ----------- HTC One ----------- */
+/* Need to test on phn*/
+/* Portrait */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: portrait) {
+}
+
+/* Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: landscape) {
+
+}
+
+/* ----------- iPad mini ----------- */
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+ .form-container .part1 .radio-button-container .radio-card.radio-card-margin, .part3 .radio-button-container .radio-card.radio-card-margin{
+	margin-left:30px;
+	margin-top:0px;
+  }
+  .form-container .part1 .radio-button-container, .part3 .radio-button-container{
+    margin-top:350px;
+  }
+  .form-container .part2{
+    top:300px;
+   }
+   .form-container .part2 [class*=col-]{
+      padding:20px 10px;
+   }
+   .back-btn{
+     font-size:2em;
+   }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+  .form-container .part1 .radio-button-container .radio-card.radio-card-margin, .part3 .radio-button-container .radio-card.radio-card-margin{
+	margin-left:30px;
+	margin-top:0px;
+  }
+  .form-container .part1 .radio-button-container, .part3.radio-button-container{
+    margin-top:220px;
+  }
+  .form-container .part2{
+    top:200px;
+   }
+   .form-container .part2 [class*=col-]{
+      padding:20px 10px;
+   }
+   .back-btn{
+     font-size:1.8em;
+   }
+}
+/* -----------  Nexus 5X ----------- */
+
+
+/* Portrait */
+@media screen 
+  and (device-width: 412px) 
+  and (device-height: 732px) 
+  and (orientation: portrait) {
+  .form-container .part1 .radio-button-container .radio-card.radio-card-margin, .part3 .radio-button-container .radio-card.radio-card-margin{
+	margin-top:20px;
+  }
+  .form-container .part1 .radio-button-container, .part3 .radio-button-container{
+    margin-top:75px;
+  }
+   .form-container .part2{
+    top:80px;
+   }
+   .form-container .part2 [class*=col-]{
+      padding:10px;
+   }
+   .back-btn{
+     font-size:1.8em;
+   }
+}
+
+/* Landscape */
+@media screen 
+  and (device-width: 732px) 
+  and (device-height: 412px) 
+  and (orientation: landscape) {
+  .form-container .part1 .radio-button-container .radio-card.radio-card-margin, .part3 .radio-button-container .radio-card.radio-card-margin{
+	margin-left:30px;
+	margin-top:0px;
+  }
+  .form-container .part1 .radio-button-container, .part3 .radio-button-container{
+    margin-top:40px;
+  }
+   .form-container .part2{
+    top:50px;
+   }
+   .form-container .part2 [class*=col-]{
+      padding:6px;
+   }
+   .back-btn{
+     font-size:1.8em;
+   }
+}
+
+/* ----------- Non-Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+   .back-btn .btn-text{
+     display:inline;
+   }
+   .form-container .part1 {
+    top: 47px;
+   }
+    .form-container .part3 {
+    top: 47px;
+   }
+    .form-container .part2 label input[type=text]{
+     font-size:1.2em;
+   }
+   .form-container .part2 label  textarea{
+     font-size:1.2em;
+   }
+   .form-container .part2 ::-webkit-input-placeholder {
+     color: rgba(89, 28, 182, 0.46);
+      font-size:1em;
+   }
+  .form-container .part1 .radio-button-container .radio-card.radio-card-margin, .part3 .radio-button-container .radio-card.radio-card-margin{
+	margin-left:20px;
+	margin-top:0px;
+  }
+  .form-container .part1 .radio-button-container, .part3 .radio-button-container{
+    margin-top:165px;
+  }
+  @media screen 
+  and (max-width: 603px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+   .form-container .part2 label input[type=text]{
+     font-size:1em;
+   }
+   .form-container .part2 label  textarea{
+     font-size:1em;
+   }
+  .form-container .part2 ::-webkit-input-placeholder {
+    color: rgba(89, 28, 182, 0.46);
+    font-size:1em;
+  }
+  .form-container .part1 .radio-button-container .radio-card.radio-card-margin, .part3 .radio-button-container .radio-card.radio-card-margin{
+	margin-left:16.66%;
+	margin-top:20px;
+  }
+  .form-container .part1 .radio-button-container, .part3 .radio-button-container{
+    margin-top:65px;
+  }
+    .form-container .part2{
+    top:80px;
+   }
+   .form-container .part2 [class*=col-]{
+      padding:10px;
+   }
+}
+  @media screen 
+  and (min-width: 603px) and (max-width:993px)
+  and (-webkit-min-device-pixel-ratio: 1) { 
+  .form-container .part1 {
+    top: 47px;
+   }
+   .form-container .part3 {
+    top: 47px;
+   }
+   .form-container .part2 label input[type=text]{
+     font-size:1em;
+   }
+   .form-container .part2 label  textarea{
+     font-size:1em;
+   }
+  .form-container .part2 ::-webkit-input-placeholder {
+    color: rgba(89, 28, 182, 0.46);
+    font-size:1em;
+  }
+  
+}
+  @media screen 
+  and (min-width: 993px) and (max-width:1200px)
+{ 
+   .form-container .part1 {
+    top: 47px;
+   }
+     .form-container .part3 {
+    top: 47px;
+   }
+}
