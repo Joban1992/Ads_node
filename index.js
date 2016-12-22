@@ -1,12 +1,15 @@
-var express =require('express');
-var app = express();
+var app = function () {
+  var http = require('http');
+  var express = require('express');
+  var app = express();
 
+  app.set('views', __dirname + '/');
+  //app.engine('html', require('ejs').renderFile);
+  app.get('/', function(req, res) {
+    res.render('index.html');
+  });
 
+  return app;
+}();
 
-app.use(express.static(__dirname+'/'));
-
-app.get("*", function(req, res){
-  res.sendfile('./index.html');
-})
-
-app.listen(8080);
+module.exports = app;
