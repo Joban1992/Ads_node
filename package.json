@@ -2,9 +2,11 @@
   "name": "Ads",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "3.x"
   },
   "keywords": [],
   "author": "'Joban' <'jjjjjpreet@gmail.com'> ('https://www.google.co.in/')",
