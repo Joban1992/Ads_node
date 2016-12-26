@@ -61,59 +61,14 @@
 	<div class="row search-result-container">
 	  <div class="col-l8 offset-l1 col-m12 col-s12">
 	    <ul>
+		  <a ui-sref="template.mwpview({id:result.id})" style="text-decoration:none;" ng-repeat="result in searchResultFromServer as results track by $index">
 		  <li>
-		    <span class="title">#Title</span>
-			<span class="sub-title">www.google.com</span>
-			<span class="msg">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</span>
+		    <span class="title">{{result.title}}</span>
+			<span class="sub-title">{{result.link}}</span>
+			<span class="msg">{{result.msg}}</span>
 		  </li>
-		  <li>
-		    <span class="title">#Title</span>
-			<span class="sub-title">www.google.com</span>
-			<span class="msg">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-			</span>
-		  </li>
-		  <li>
-		    <span class="title">#Title</span>
-			<span class="sub-title">www.google.com</span>
-			<span class="msg">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries
-			</span>
-		  </li>
-		  <li>
-		    <span class="title">#Title</span>
-			<span class="sub-title">www.google.com</span>
-			<span class="msg">but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
-			</span>
-		  </li>
-		  <li>
-		    <span class="title">#Title</span>
-			<span class="sub-title">www.google.com</span>
-			<span class="msg">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</span>
-		  </li>
-		  <li>
-		    <span class="title">#Title</span>
-			<span class="sub-title">www.google.com</span>
-			<span class="msg">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</span>
-		  </li>
-		  <li>
-		    <span class="title">#Title</span>
-			<span class="sub-title">www.google.com</span>
-			<span class="msg">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</span>
-		  </li>
-		  <li>
-		    <span class="title">#Title</span>
-			<span class="sub-title">www.google.com</span>
-			<span class="msg">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</span>
-		  </li>
-		  <li>
-		    <span class="title">#Title</span>
-			<span class="sub-title">www.google.com</span>
-			<span class="msg">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</span>
-		  </li>
-		  <li>
-		    <span class="title">#Title</span>
-			<span class="sub-title">www.google.com</span>
-			<span class="msg">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</span>
-		  </li>
+		  </a>
+		  <li ng-if="results.length==0" style="text-align:center;">No result found<li>
 		</ul>
 	  </div>
 	  <div class="col-l3 col-m12 col-s12">
@@ -131,4 +86,5 @@
 		</div>
 	  </div>
 	</div>
+	
 
