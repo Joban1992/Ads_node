@@ -11,12 +11,12 @@ angular.module("app.directive",[]).directive('searchBox', function(){
 	    //call to serachService
 		serachService.setSearchedQuery($scope.searchQuery);
 		$state.go("template.search");
-        $scope.$('overlay')[0].style.display="block";
+        $scope.$parent.showOverlay=true;
         $scope.$('action-container')[0].style.bottom=0;
 	    return false;
      }
      $scope.actionBarOption = function(){
-       $scope.$('overlay')[0].style.display="none";
+       $scope.$parent.showOverlay=false;
        $scope.$('action-container')[0].style.bottom=-215;
      }
      $scope.$ = function(className){
@@ -35,6 +35,10 @@ angular.module("app.directive",[]).directive('searchBox', function(){
 	    $scope.$parent.containerDeactive = true;
 	    //close menu is in template.js
 	  }
+	  $scope.openLoginBox = function(){
+	    $scope.$parent.loginActive=true;
+		$scope.$parent.showOverlay = true;
+	  }
 	}
   }
 })
@@ -48,6 +52,10 @@ angular.module("app.directive",[]).directive('searchBox', function(){
 	    $scope.$parent.containerDeactive = true;
 	    //close menu is in template.js
 	  }
+	  $scope.openLoginBox = function(){
+	    $scope.$parent.loginActive=true;
+		$scope.$parent.showOverlay = true;
+	  }
 	}
   }
 })
@@ -60,7 +68,19 @@ angular.module("app.directive",[]).directive('searchBox', function(){
 .directive('overlay', function(){
   return{
     restrict:'E',
-	template:'<div class="overlay"></div>'
+	template:'<div class="overlay" ng-if="showOverlay"></div>'
+  }
+})
+.directive('login', function(){
+  return{
+    restrict:'E',
+	templateUrl:'Assets/pages/login.html',
+	controller:function($scope){
+	  $scope.closeLoginBox = function(){
+	    $scope.loginActive=false;
+		$scope.showOverlay = false;
+	  }
+	}
   }
 })
 .directive('actionBar', function(){
@@ -69,7 +89,7 @@ angular.module("app.directive",[]).directive('searchBox', function(){
 	templateUrl:'Assets/pages/action-bar.html',
 	controller:function($scope){
 	  $scope.actionBarOption = function(){
-       $scope.$('overlay')[0].style.display="none";
+       $scope.showOverlay=false;
        $scope.$('action-container')[0].style.bottom=-215;
      }
 	  $scope.$ = function(className){
@@ -134,6 +154,41 @@ angular.module("app.directive",[]).directive('searchBox', function(){
 	controller:function($scope, $sce){
 	  console.log($scope.addr,'in directionMap');
 	  $scope.mapSrc = $sce.trustAsResourceUrl("https://www.google.com/maps/embed/v1/directions?key=AIzaSyDFZEBpTNBweNhkEDiwZ1ofJasP7F2ov5k&origin="+$scope.addr.saddr+"&destination="+$scope.addr.daddr);
+	}
+  }
+})
+.directive('preview', function(){
+  return{
+    restrict:'E',
+	scope:{
+	   toggle:"&toggle",
+       data:"="
+	},
+	templateUrl:'Assets/pages/preview.html',
+	controller:function($scope){
+	  console.log($scope.data,'sdsdsd')
+	  $scope.dataFromServer = $scope.data;
+	  $scope.mwpTabs = $scope.dataFromServer.tabs;
+	  $scope.activeTab = $scope.mwpTabs[0];
+	  
+	 $scope.toogleActiveMwpTab = function(currentMwpTab){
+       for(var i=0;i<$scope.mwpTabs.length;i++){
+	    console.log($scope.mwpTabs[i]);
+	    $scope.mwpTabs[i].active = false;
+	   }
+	
+	  $scope.activeTab = currentMwpTab;
+	  currentMwpTab.active = true;
+     }
+	  $scope.toggleFun = function(){
+	  console.log($scope.toogle);
+	  if($scope.toggle!=null && $scope.toggle!=undefined){
+        $scope.toggle(); 
+	  }
+	 }  
+	},
+	link:function(scope,ele, atr, ctrl){
+	  console.log(scope.data,' from ss');
 	}
   }
 })
