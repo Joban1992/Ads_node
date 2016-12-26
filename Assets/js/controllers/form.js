@@ -1,7 +1,7 @@
 angular.module('app.controllers').controller('formCntrl', function($scope, $timeout, $filter, $sce){
   console.log('form ctrl');
   $scope.init = function(){
-    $scope.layoutToggle = false;
+    $scope.layoutToggle = true;
 	//$timeout(function(){console.log(document.getElementsByClassName('google-maps-link').length)},9220);
 	//this data will come from server for each mini web page
 	
@@ -47,14 +47,7 @@ angular.module('app.controllers').controller('formCntrl', function($scope, $time
 	}
   }
   
-  $scope.toogleActiveMwpTab = function(currentMwpTab){
-    for(var i=0;i<$scope.mwpTabs.length;i++){
-	console.log($scope.mwpTabs[i]);
-	 $scope.mwpTabs[i].active = false;
-	}
-	$scope.activeTab = currentMwpTab;
-	currentMwpTab.active = true;
-  }
+  
   $scope.$ = function(className){
        return document.getElementsByClassName(className);
   }
