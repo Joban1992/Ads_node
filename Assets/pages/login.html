@@ -4,7 +4,7 @@
  .login-container{
     width:100%;
 	margin:0 auto;
-    margin-top:100px; 
+    margin-top: 38px;	
 	height:300px;
 	border-radius:5px;
 	position:fixed;
@@ -27,10 +27,14 @@
      padding:0;
 	 position:relative;
   }
+ 
   .login-container .right .head{
-    text-align: right;
+    text-align: center; 
     font-size: 1em;
     padding: 23px;
+    padding: top;
+    padding-top: 32px;
+    padding-bottom: 4px;
   }
   .login-container .left .login-btn{
      background: #fd6649;
@@ -132,12 +136,12 @@
   
   
   
-  .login-container .center span{
+  
+  .login-container .center span {
     position: absolute;
-    left: 29px;
-	top: 127px;
+    left: 50%;
     font-size: 1.3em;
-  }
+}
   .login-container .logo{
     text-align:center;
 	color:#fd6649;
@@ -223,42 +227,87 @@
 
 
 
+@media only screen and (min-width:601px){
+  .login-container .center span{
+    position: absolute;
+    left: -8px;
+    top: 127px;
+    font-size: 1em;
+  }
+   .login-container{
+    margin-top: 100px;	
+  }
+   .login-container .right .head{
+    text-align: right;
+    font-size: 1em;
+    padding: 23px;
+  }
+}
 
+@media only screen and (min-width:993px){
+ .login-container .center span{
+    left:0;
+	top: 127px;
+    font-size: 1.3em;
+  }
+ .login-container{
+    margin-top: 100px;	
+  }
+   .login-container .right .head{
+    text-align: right;
+    font-size: 1em;
+    padding: 23px;
+  }
+}
+@media only screen and (min-width:1400px){
+.login-container .center span{
+    left: 0;
+	top: 127px;
+    font-size: 1.5em;
+  }
+   .login-container{
+    margin-top: 100px;	
+  }
+ .login-container .right .head{
+    text-align: right;
+    font-size: 1em;
+    padding: 23px;
+  }
+}
 </style>
 
 
   <div class="row login-container" ng-class="{'login-active':loginActive}">
-    <div class="col-l8 offset-l2">
+    <div class="col-l8 offset-l2 col-m8 offset-m2 col-s12">
 	  <div class="row" style="background:#fff;border-radius:3px;position:relative">
 	  
-	  <div class="col-l6 left">
+	  <div class="col-l6 col-m6 col-s12 left">
 	    <div class="row">
-		   <div class="col-l12 logo">
+		   <div class="col-l12 col-m12 col-s12 logo">
 	         Logo
 	       </div>
-		   <div class="col-l11 offset-l1">
+		   <div class="col-l11 offset-l1 col-m11 offset-m1 col-s12">
 	         <form class="form-5 clearfix">
 				<input type="text" name="name" ng-model="loginData.username" placeholder="Name">
 				<input type="text" name="email" ng-model="loginData.email" placeholder="Email"> 
                 <a href="#" class="forgot-password">Forgot Password?</a>
 		   </form>​​​​
-		   <button class="col-l12 login-btn">
+		   <button class="col-l12 col-m12 col-s12 login-btn">
 		     <i class="icon ion-arrow-right-c"></i>
 				<span>Login</span>
 		   </button>
 	     </div>
 		</div>
 	  </div>
-	  <div class="col-l1 center">
-	     <b style="visibility:hidden">or</b>
+	  <div class="col-l1 col-m1 col-s12 center">
 	     <span>or</span>
 	  </div>
-	  <div class="col-l5 right">
+	  <div class="col-l5 col-m6 col-s12 right">
 	    <div class="row">
-		   <div class="col-l11 head">
+		   <div class="col-l11 col-m11 col-s12 head">
 	         Don't have account? Sign up!
 	       </div>
-		   <div class="col-l11">
+		   <div class="col-l11 col-m11 col-s12">
 		     <div class="social-login f">
 	            <i class="icon ion-social-facebook"></i>
 	         </div>
