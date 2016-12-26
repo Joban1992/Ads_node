@@ -19,5 +19,21 @@ angular.module("app").config(function($stateProvider, $urlRouterProvider){
 	templateUrl:'Assets/pages/form.html',
 	controller:'formCntrl'
   })
+  .state('template.profile',{
+    url:'/profile',
+	templateUrl:'Assets/pages/profile.html',
+	controller:'profileCntrl'
+  })
+  .state('template.mwpview',{
+    url:'/view',
+	params:{id:null},
+	template:'<loader ng-if="showHideLoader"></loader> <preview toggle="togglePreview()" data="dataFromServer"></preview>',
+	controller:'mwpviewCntrl'
+  })
+  .state('template.login',{
+    url:'/login',
+	templateUrl:'Assets/pages/login.html',
+  })
+  
   $urlRouterProvider.otherwise('template/home');
 })
