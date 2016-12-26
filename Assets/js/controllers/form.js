@@ -1,7 +1,7 @@
 angular.module('app.controllers').controller('formCntrl', function($scope, $timeout, $filter, $sce){
   console.log('form ctrl');
   $scope.init = function(){
-    $scope.layoutToggle = true;
+    $scope.layoutToggle = false;
 	//$timeout(function(){console.log(document.getElementsByClassName('google-maps-link').length)},9220);
 	//this data will come from server for each mini web page
 	
