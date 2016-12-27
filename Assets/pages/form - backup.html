@@ -1,0 +1,122 @@
+<div class="form-body">
+<main class="landing-layout"  ng-class="{'landing-layout--open':layoutToggle}">
+ 
+  <div class="landing--above">
+  <div class="row form-container">
+   <div class="scroll-btn btn-left" ng-click="formSlider(false)">
+      <i class="icon ion-android-arrow-dropleft-circle"></i>
+   </div>
+   <div class="scroll-btn btn-right" ng-click="formSlider(true)">
+     <i class="icon ion-android-arrow-dropright-circle"></i>
+   </div>
+   <div class="pagination-container">
+     <ul class="pagination-container-ul">
+	   <li class="active"></li>
+	   <li></li>
+	   <li></li>
+	 </ul>
+   </div>
+   
+  <!-- <div class="row" style="    position: relative;
+    height: 100%;
+    overflow-x: hidden;
+    z-index:10;">-->
+    <a ui-sref="template.home" class="back-btn"><i class="icon ion-log-in"></i> <span class="btn-text">Back</span></a>
+    <div class="col-l12 col-m12 col-s12 form-title">
+	   {{currentFormHeading}}
+	</div>
+	
+	<div class="col-l12 col-m12 col-s12 part1">
+	   <div class="row radio-button-container">
+		 <div class="col-l2 offset-l4 col-m3 offset-m3 col-s8 offset-s2  radio-card" ng-click="formSlider(true)">
+		   <!--<i class="icon ion-android-unlock"></i>-->
+		   <i class="icon ion-android-globe"></i>
+		   Public
+		 </div>
+		 <div class="col-l2 col-m3 col-s8 offset-s2 radio-card radio-card-margin" ng-click="formSlider(true)">
+		   <i class="icon ion-android-lock"></i>
+		   Private
+		 </div>
+	   </div>
+	</div>
+	
+	<div class="col-l12 col-m12 col-s12 part2">
+	   <div class="row">
+		 <div class="col-l4 offset-l2 col-m4 offset-m2 col-s10 offset-s1">
+		   <label for="name">
+		    <input type="text" placeholder="Name">
+			<i class="icon ion-person"></i>
+		   </label>
+		 </div>
+		 <div class="col-l4 col-m4 offset-m0 col-s10 offset-s1" >
+		    <label for="heading">
+		    <input type="text" placeholder="Heading">
+			<i class="icon ion-android-textsms"></i>
+		   </label>
+		 </div>
+		 <div class="col-l8 offset-l2 col-m8 offset-m2 col-s10 offset-s1">
+		    <label for="description">
+		       <textarea placeholder="Description"></textarea>
+			</label>
+		 </div>
+		  <div class="col-l4 offset-l2 col-m4 offset-m2 col-s10 offset-s1">
+		   <label for="link">
+		    <input type="text" placeholder="Link to other website">
+			<i class="icon ion-link"></i>
+		   </label>
+		 </div>
+		 <div class="col-l4 col-m4 offset-m0 col-s10 offset-s1" >
+		    <label for="phone">
+		    <input type="text" placeholder="Phone">
+			<i class="icon ion-ios-telephone"></i>
+		   </label>
+		 </div>
+		 <div class="col-l4 offset-l2 col-m4 offset-m2 col-s10 offset-s1">
+		   <label for="email">
+		    <input type="text" placeholder="Email">
+			<i class="icon ion-email"></i>
+		   </label>
+		 </div>
+		 <div class="col-l4 col-m4 offset-m0 col-s10 offset-s1" >
+		    <label for="website">
+		    <input type="text" placeholder="Website">
+			<i class="icon ion-android-globe"></i>
+		   </label>
+		 </div>
+		 
+	   </div>
+	</div>
+	<div class="col-l12 col-m12 col-s12 part3">
+	   <div class="row radio-button-container">
+		 <div class="col-l2 offset-l4 col-m3 offset-m3 col-s8 offset-s2  radio-card" ng-click="togglePreview()">
+		   <!--<i class="icon ion-android-unlock"></i>-->
+		   <i class="icon ion-eye"></i>
+		   Preview
+		 </div>
+		 <div class="col-l2 col-m3 col-s8 offset-s2 radio-card radio-card-margin" ng-click="getNoti()">
+		   <i class="icon ion-android-add-circle"></i>
+		   Create
+		 </div>
+	   </div>
+	</div>
+	<!--</div>-->
+	
+
+  </div>
+  </div>
+  </section>
+   <div class="landing--beneath" >
+ 
+	  <preview toggle="togglePreview()" data="dataFromServer"></preview>
+   </div>
+   
+   </main>  
+   
+  </div>
+  
+  <!--Menu Ends-->
+  
+	
+	
+
+

@@ -97,13 +97,29 @@ ul{
   background: #f7f7f7;
   position:relative;
   top:0;
-  transition:all .5s ease;
-  //display:none;
-  transform:scaleX(1);
+  left:0;
+  transition:all .2s ease;
+  overflow-x:hidden;
+}
+menu{
+   margin: 0;
+}
+
+.sub-container{
+  height:100%;
+  width:100%;
+  padding:0;
+  margin:0;
+  background: #f7f7f7;
+  position:relative;
+  top:0;
+  left:0;
+  transition:all .2s ease;
 }
 .container-deactive{
-  top:100px;
-  transform:scaleX(.8);
+  //top:100px;
+  //transform:scaleX(.8);
+  left:-30%;
 }
 
  .row{
@@ -188,37 +204,35 @@ input, button:focus {
 
 .menu{
   position: fixed;
-  width: 100%;
+  width: 80%;
   height: 100%;
   background: url(../images/menubg.svg) center center no-repeat fixed;
   background-size: cover;
   background-size: cover;
   background-color: #531eaa;
   z-index: 11;
-  top: 100%;
-  left:0;
-  transition:all .5s ease;
+  top: 0;
+  right: -80%;
+  transition:all .2s ease;
   color: #fff;
   text-align: center;
 }
+
 .menu-active{
-  top: 0;
+  right: 0;
 }
 .menu .menu-title{
-  font-size: 2em;
+  font-size: 1.5em;
+  padding: 9px;
 }
 
 .menu .close-menu{
-  bottom: -50px;
+  top: -12px;
   cursor: pointer;
   width: 0;
   height: 0;
-  border-left: 70px solid transparent;
-  border-right: 70px solid transparent;
-  border-bottom: 70px solid #28e3cc;
-  left: 50%;
+  left: 23px;
   position: absolute;
-  transform: translate(-50%,-50%);
   z-index: 999;
 }
 .menu .close-menu i.icon{
@@ -228,16 +242,16 @@ input, button:focus {
   margin: 17px -12px;
 }
 .menu .menu-body{
-  font-size: 2em;
+  font-size: 1.5em;
   height:75%;
   display:table;
 }
 .menu .menu-body ul{
-  display:table-cell;
+  //display:table-cell;
   vertical-align:middle;
 }
 .menu .menu-body ul li{
-  padding: 16px;
+  padding: 8px;
 }
 .menu .menu-body ul li a{
   text-decoration:none;
@@ -266,6 +280,9 @@ input, button:focus {
 [class*="col-"] {
   float: left;
   padding: 15px;
+}
+.padding-mobile{
+  padding:0;
 }
 .offset-s1 {margin-left: 8.33%;}
 .offset-s2 {margin-left: 16.66%;}
@@ -318,6 +335,20 @@ input, button:focus {
 .col-m10 {width: 83.33%;}
 .col-m11 {width: 91.66%;}
 .col-m12 {width: 100%;}
+.padding-mobile{
+ padding:15px;
+}
+.container-deactive{
+  left:-28%;
+}
+.menu{
+  width: 30%;
+  right: -30%;
+}
+.menu-active{
+ right:0;
+}
+
 .medium-large-logo{
    display:inline;
 }
@@ -328,20 +359,19 @@ input, button:focus {
   width:50%;
 }
 .menu .menu-title{
-  font-size: 3em;
+  font-size: 2em;
 }
 .menu .close-menu{
-  border-left: 100px solid transparent;
-  border-right: 100px solid transparent;
-  border-bottom: 100px solid #28e3cc;
+  top:-36px;
+  left:22px;
 }
 .menu .close-menu i.icon{ 
-  font-size:3em;
+  font-size:2.5em;
   margin: 39px -12px;
 }
 .menu .menu-body{
   padding:0;
-  font-size:2.5em;
+  font-size:1.8em;
   height:63%;
 }
 .menu .menu-body ul{
@@ -377,6 +407,20 @@ input, button:focus {
 .col-l10 {width: 83.33%;}
 .col-l11 {width: 91.66%;}
 .col-l12 {width: 100%;}
+.padding-mobile{
+  padding:15px;
+}
+.container-deactive{
+  left:-29%;
+}
+.menu{
+  width: 30%;
+  right: -30%;
+}
+.menu-active{
+ right:0;
+}
+
 .medium-large-logo{
    display:inline;
 }
@@ -387,20 +431,18 @@ input, button:focus {
   width:41%;
 }
 .menu .menu-title{
-  font-size: 3em;
+  font-size: 2em;
 }
 .menu .close-menu{
-  border-left: 100px solid transparent;
-  border-right: 100px solid transparent;
-  border-bottom: 100px solid #28e3cc;
+  top:-33px;
 }
 .menu .close-menu i.icon{ 
-  font-size:3em;
+  font-size:2.5em;
   margin: 39px -12px;
 }
 .menu .menu-body{
   padding:0;
-  font-size: 2.5em;
+  font-size: 1.8em;
   height: 68%;
 }
 .menu .menu-body ul{
@@ -411,21 +453,37 @@ input, button:focus {
 }
 }
 @media only screen and (min-width:1400px){
+.padding-mobile{
+  padding:15px;
+}
 .container{
   width:1200px;
   margin:auto;
+}
+.sub-container{
+  width:1200px;
+  margin:auto;
+}
+.container-deactive{
+  left:-30%;
+}
+.menu{
+ position: absolute;
+  width: 30%;
+  right: -30%;
+}
+.menu-active{
+ right:0;
 }
 
 .menu .menu-title{
   font-size: 3em;
 }
 .menu .close-menu{
-  border-left: 100px solid transparent;
-  border-right: 100px solid transparent;
-  border-bottom: 100px solid #28e3cc;
+  top:-33px;
 }
 .menu .close-menu i.icon{ 
-  font-size:3em;
+  font-size:2.5em;
   margin: 39px -12px;
 }
 .menu .menu-body{
@@ -442,16 +500,14 @@ input, button:focus {
 }
 @media (max-device-width:736px) and (orientation:landscape) {
 .menu .close-menu{
-  border-left: 80px solid transparent;
-  border-right: 80px solid transparent;
-  border-bottom: 80px solid #28e3cc;
+  top:-20px;
 }
 .menu .close-menu i.icon {
-  font-size: 2.5em;
+  font-size: 2em;
   margin: 26px -10px;
 }
 .menu .menu-title{
-  font-size: 2em;
+  font-size: 1.7em;
 }
 .menu .menu-body{
       padding: 0;
@@ -483,7 +539,7 @@ input, button:focus {
 @media (min-device-width:1024px) and (orientation:landscape) {
 .menu .menu-body{
     padding: 0;
-    font-size: 2.5em;
+    //font-size: 2.5em;
     height: 70%;
 }
 .menu .menu-body ul{
@@ -492,4 +548,48 @@ input, button:focus {
 .menu .menu-body ul li{
    padding:10px;
 }	
+}
+
+/* ----------- iPad mini ----------- */
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+.container-deactive{
+  left:-40%;
+}
+.menu{
+ position: absolute;
+  width: 40%;
+  right: -40%;
+}
+.menu-active{
+ right:0;
+}
+ .menu .close-menu{
+  top:-20px;
+}
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+ 
+  .form-container .part2{
+    top:200px;
+   }
+   .form-container .part2 [class*=col-]{
+      padding:20px 10px;
+   }
+   .back-btn{
+     font-size:1.8em;
+   }
 }

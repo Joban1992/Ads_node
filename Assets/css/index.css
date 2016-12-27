@@ -8,12 +8,11 @@
   text-align: center;
   position: relative;
 }
+
 .desc .main-title{
-  font-size:30px;
+    font-size: 1.5em;
 }
-.desc .main-title{
-    font-size: 15px;
-}
+
 .tag-line{
   text-align:center;
   padding: 10px;
@@ -172,6 +171,9 @@
 
 
 @media only screen and (min-width:601px){
+ .desc .main-title{
+    font-size: 2em;
+}
 .search-container{
   width: 66.66%
 }
@@ -187,6 +189,9 @@ ul.search-type-selector li{
 }
 
 @media only screen and (min-width:993px){
+ .desc .main-title{
+    font-size: 2em;
+}
 .search-container{
   width: 66.66%
 }

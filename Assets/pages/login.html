@@ -35,6 +35,9 @@
     padding: top;
     padding-top: 32px;
     padding-bottom: 4px;
+	white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
   .login-container .left .login-btn{
      background: #fd6649;
@@ -140,8 +143,8 @@
   .login-container .center span {
     position: absolute;
     left: 50%;
-    font-size: 1.3em;
-}
+    font-size: 1.3em; 
+  }
   .login-container .logo{
     text-align:center;
 	color:#fd6649;
@@ -246,7 +249,7 @@
 
 @media only screen and (min-width:993px){
  .login-container .center span{
-    left:0;
+    left:-10px;
 	top: 127px;
     font-size: 1.3em;
   }
@@ -261,7 +264,7 @@
 }
 @media only screen and (min-width:1400px){
 .login-container .center span{
-    left: 0;
+    left: -10px;
 	top: 127px;
     font-size: 1.5em;
   }
@@ -273,6 +276,221 @@
     font-size: 1em;
     padding: 23px;
   }
+}
+
+
+/* ----------- iPhone 4 and 4S ----------- */
+
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+
+
+/* ----------- iPhone 6 ----------- */
+
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+   .login-container{
+	   margin-top: 76px;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+   .login-container{
+       position:absolute!important;
+	   margin-top: 26px;
+    }
+}
+
+/* ----------- iPhone 5 and 5S ----------- */
+
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+   .login-container{
+	   margin-top: 26px;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (orientation: landscape) {
+   login-container{
+      position:absolute!important;
+	   margin-top: 6px;
+    }
+}
+
+/* ----------- iPhone 6+ ----------- */
+
+
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+  .login-container{
+	   margin-top: 106px;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+    .login-container{
+	   margin-top: 26px;
+    }
+}
+
+/* ----------- Galaxy S5 ----------- */
+
+/* Portrait */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: portrait) {
+   .login-container{
+	   margin-top: 56px;
+    }
+}
+
+/* Landscape */
+/* Not working */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: landscape) {
+
+}
+
+/* ----------- HTC One ----------- */
+/* Need to test on phn*/
+/* Portrait */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: portrait) {
+}
+
+/* Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: landscape) {
+
+}
+
+/* ----------- iPad mini ----------- */
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+   .login-container{
+	   margin-top: 306px;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+  .login-container{
+	   margin-top: 256px;
+    }
+
+}
+/* -----------  Nexus 5X ----------- */
+
+
+/* Portrait */
+@media screen 
+  and (device-width: 412px) 
+  and (device-height: 732px) 
+  and (orientation: portrait) {
+   .login-container{
+	   margin-top: 66px;
+    }
+}
+
+/* Landscape */
+@media screen 
+  and (device-width: 732px) 
+  and (device-height: 412px) 
+  and (orientation: landscape) {
+   .login-container{
+	   margin-top: 26px;
+    }
+}
+
+/* ----------- Non-Retina Screens ----------- */
+@media only screen and (min-width:1400px){
+
+}
+@media screen 
+  and (min-device-width: 1200px) 
+ { 
+
+  @media screen 
+  and (max-width: 603px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+   
+}
+  @media screen 
+  and (min-width: 603px) and (max-width:993px)
+  and (-webkit-min-device-pixel-ratio: 1) { 
+ 
+}
+  @media screen 
+  and (min-width: 993px) and (max-width:1200px)
+{ 
+
+}
 }
 </style>
 
@@ -305,7 +523,7 @@
 	  <div class="col-l5 col-m6 col-s12 right">
 	    <div class="row">
 		   <div class="col-l11 col-m11 col-s12 head">
-	         Don't have account? Sign up!
+	          <span class="sign-up">Don't have account? Sign up!</span>
 	       </div>
 		   <div class="col-l11 col-m11 col-s12">
 		     <div class="social-login f">

@@ -1,0 +1,1185 @@
+.form-body{
+  
+  background-color: #531eaa;
+  position: fixed;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+  //overflow:hidden;
+}
+.landing--above {
+	z-index: 200;
+	 background: url(../images/menubg.svg) center center no-repeat fixed;
+	  background-color: #531eaa;
+     position: absolute;
+	 //position: relative;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+.landing--beneath {
+	z-index:100;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 100%;
+	//background-position: 50% 0%;
+	//background: url(../images/menubg.svg) center center no-repeat fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background:#fff;
+}
+
+.landing--above {
+	-webkit-transition: -webkit-transform 1s 0.6s, opacity 1s 0.6s, visibility 1s 0.6s;
+	transition: transform 1s 0.6s, opacity 1s 0.6s, visibility 1s 0.6s;
+	-webkit-transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+	transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.landing-layout--open .landing--above {
+	opacity: 0;
+	visibility:hidden;
+	-webkit-transition: -webkit-transform 0.8s, opacity 0.8s,  visibility 0.8s;
+	transition: transform 0.8s, opacity 0.8s,  visibility 0.8s;
+	-webkit-transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+	transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+
+.landing--beneath {
+	opacity: 0;
+	visibility:hidden;
+	-webkit-transition: -webkit-transform 0.8s, opacity 0.8s 0.1s,  visibility 0.8s 0.1s;
+	transition: transform 0.8s, opacity 0.8s 0.1s, visibility 0.8s 0.1s;
+	-webkit-transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+	transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+
+.landing-layout--open .landing--beneath {
+	opacity: 1;
+	visibility:visible;
+	-webkit-transition: -webkit-transform 1s 0.6s, opacity 1s 0.6s, visibility 1s 0.6s;
+	transition: transform 1s 0.6s, opacity 1s 0.6s, visibility 1s 0.6s;
+	-webkit-transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+	transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+
+
+
+
+
+.form-container{
+  position: fixed;
+  overflow-x:hidden;
+  width: 100%;
+  //margin:0 auto;
+  height: 100%;
+
+  z-index: 11;
+  top: 0;
+  transition:all .5s ease;
+  color: #fff;
+  text-align: center;
+  
+}
+.view-container{
+   position: fixed;
+  overflow-x:hidden;
+  //width: 90%;
+  //margin:0 auto;
+  height: 100%;
+  z-index: 11;
+  top: 0;
+  transition:all .5s ease;
+  text-align: left;
+  color:black;
+}
+.notification-container{
+  position:fixed;
+  z-index:12;
+  bottom:10px;
+  left:0;
+  width:100%;
+  //display:none;
+  text-align: center;
+  color:#fff;
+}
+.notification-container .notification{
+  background:#f1c40f;
+  display:inline-block;
+  padding:5px;
+  border-radius:5px;
+  border:2px solid #fff;
+  font-size:1em;
+  padding-right:25px;
+  position:relative;
+}
+.notification-container span.avatar-img{
+  position:absolute;
+  left:5px;
+  top:5px;  
+}
+.notification-container span.avatar-img img{
+  float:left;
+}
+.notification-container span.text{
+  font-size:1.2em;
+  float:left;
+  margin-left:5px;
+  padding:0 0 0 30px;
+}
+.notification-container span i{
+  font-size:1.5em;
+  float:left;
+  right:5px;
+  top:8px;
+  position:absolute;
+  cursor:pointer;
+}
+.form-container .form-title, .view-container .view-title{
+  font-size: 2em;
+  text-align:center;
+}
+.view-container .view-title{
+  color:#531eaa;
+}
+
+.form-container .active-left{
+  left:0!important;
+  display:block!important;
+}
+.form-container .deactive-left{
+  left:-100%!important;;
+}
+.form-container .active-right{
+  left:0!important;
+  display:block!important;
+}
+.form-container .deactive-right{
+  left:100%!important;;
+}
+.form-container .part1{
+  display:block;
+  -webkit-transition:all 1s ease;
+  position:absolute;
+  top: 77px;
+}
+.form-container .part3{
+   //display:none;
+  -webkit-transition:all 1s ease;
+  position:absolute;
+  top: 77px;
+  left:100%;
+}
+.form-container .part1 .radio-button-container,.part3 .radio-button-container{
+  margin-top:64px;
+}
+.form-container .part1 .radio-button-container .radio-card,.part3 .radio-button-container .radio-card{
+  background:#28e3cc;
+  color:rgba(255, 255, 255, 0.71);
+  font-size: 2em;
+  border-radius:5px;
+  cursor:pointer;
+}
+.form-container .part1 .radio-button-container .radio-card.radio-card-margin,.part3 .radio-button-container .radio-card.radio-card-margin{
+  margin-top:20px;
+}
+.form-container .part1 .radio-button-container .radio-card:hover,.part3 .radio-button-container .radio-card:hover{
+  color:#fff;
+}
+.form-container .part1 .radio-button-container .radio-card i.icon,.part3 .radio-button-container .radio-card i.icon{
+ display:block;
+ width:100%;
+ font-size:3em;
+}
+
+.form-container  .scroll-btn{
+ position: fixed;
+ font-size:2.5em;
+ cursor:pointer;
+ color:rgba(255, 255, 255, 0.71);
+ z-index:10;
+ z-index:1033;
+}
+.form-container .scroll-btn:hover{
+ color:#fff;
+}
+.form-container .scroll-btn.btn-left{
+  left:10px;
+  top:50%;
+}
+.form-container .scroll-btn.btn-right{
+  right:10px;
+  top:50%;
+}
+.form-container .part2{
+   //display:none;
+   left:100%;
+   //left:0;
+   position:absolute;
+   top: 153px;
+  -webkit-transition:all 1s ease;
+}
+.form-container .part2 label{
+  position:relative;
+}
+.form-container .part2 label i{
+    position: absolute;
+    display: block;
+    top: -14px;
+    right: 2px;
+    color: #fff;
+    background: rgba(89, 28, 182, 0.46);
+    padding: 7.5px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    padding: 12px 13px 13px 15px;
+    font-size: 1.5em;
+	cursor:pointer;
+}
+.form-container .part2 label input[type=text]{
+   color:#591cb6;
+   background:#fff;//#fff;
+   //border-color: transparent transparent transparent transparent;
+   border:2px solid rgba(89, 28, 182, 0.46);
+   padding:10px 50px 10px 10px;
+   border-radius:5px;
+   width:100%;
+   font-size:1em;
+}
+.form-container .part2 label  textarea{
+   height:80px;
+   width:100%;
+   padding:10px;
+   border:2px solid rgba(89, 28, 182, 0.46);
+   background:#fff;
+   color: #591cb6;
+   font-size:1.2em;
+}
+.form-container .part2 ::-webkit-input-placeholder {
+  color: rgba(89, 28, 182, 0.46);
+  font-size:1em;
+}
+.form-container .pagination-container{
+  position:fixed;
+  bottom:10px;
+  width:100%;
+  text-align:center;
+}
+.form-container .pagination-container ul{
+
+}
+.form-container .pagination-container ul li{
+  display:inline-block;
+  background-color:rgba(255, 255, 255, 0.71);
+  padding:5px;
+  border-radius:35%;
+  margin-left:5px;
+  cursor:pointer;
+}
+.form-container .pagination-container ul li.active{
+  background-color:#fff;
+}
+
+.back-btn{
+   position:fixed;
+   color:#fff;
+   left:1px;
+   top:25px;
+   text-decoration:none;
+   font-size:1.2em;
+}
+.back-btn .btn-text{
+  display:none;
+}
+.back-btn i{
+  transform: rotate(-180deg);
+  display: inline-block;
+}
+
+.public-private .public, .private	{
+				  
+				  padding: 19px;
+				  border-radius:5px;
+				  color:#fff;
+				  background: rgb(208, 222, 220);
+				}
+				.public-private .public.active, .private.active{
+				  background:#28e3cc;
+				}
+				.public-private .public strong, .private strong{
+				  font-size:2em;
+				  margin-left:10px;
+				}
+			    .public-private .public span.icon-box, .private span.icon-box{
+					display: inline-block;
+					width: 70px;
+					height: 70px;
+					font-size: 2.125rem;
+					line-height: 2.5;
+					//text-align: center;
+					border: 5px solid #ece9e9;
+					border-radius: 10%;
+					padding: 13px 7px 0px 16px;
+					color:#fff;
+					transform:rotate(45deg);
+					//-webkit-animation: rotate 3s linear 3s infinite;
+					//animation: rotate 3s linear 3s infinite;
+		     	}
+				
+				.public-private .public span.icon-box::before{
+			         content: "\f38c";
+					 font-family: "Ionicons";
+					position: absolute;
+					top: -12px;
+					left: 16px;
+					transform:rotate(-45deg);
+					//-webkit-animation: notrotate 3s linear 3s infinite;
+				    //animation: notrotate 3s linear 3s infinite;
+				}
+				.public-private  .private span.icon-box::before{
+			        content: "\f392";
+					font-family: "Ionicons";
+					position: absolute;
+					top: -12px;
+					left: 20px;
+					transform:rotate(-45deg);
+					//-webkit-animation: notrotate 3s linear 3s infinite;
+				    //animation: notrotate 3s linear 3s infinite;
+				}
+			    .public-private  span.icon-box i{
+				   visibility:hidden;
+			    }
+				@keyframes rotate{
+				  from{transform:rotate(0deg);}
+				  to{transform:rotate(360deg);}
+				}
+				@keyframes notrotate{
+				  from{transform:rotate(0deg);}
+				  to{transform:rotate(-45deg);}
+				}
+				.mpw-img{
+				  background:url('Assets/images/patterns.jpg');
+				  background-repeat: no-repeat;
+				  background-size: cover;
+				  text-align: center;
+				}
+				.mpw-img span{
+				  display:inline-block;
+				  font-size: 1.5em;
+				color: #b0afb3;
+				padding:150px;
+				}
+				
+				.mwp-tabs{
+				}
+				.mwp-tabs [class*='col-'].mwp-tab{
+				    padding: 0;
+					text-align: center;
+					border-bottom: 3px solid rgb(208, 222, 220);
+					font-size: 1.5em;
+					transition:all .5s ease;
+					cursor:pointer;
+					color:rgb(208, 222, 220);
+				}
+				.mwp-tabs [class*='col-'].active{
+					border-bottom: 3px solid #531eaa;
+					color:#531eaa;
+				}
+				.mwp-tabs .mwp-tab-info{
+				  color:;
+				  padding:0;
+				  font-size:1.3em;
+				}
+				.mwp-tabs .mwp-tab-info .row{
+				  margin-top:15px;
+				}
+				.mwp-tabs .mwp-tab-info [class*='col-']{
+				  padding:0px;
+				}
+				.mwp-tabs .mwp-tab-info .mwp-info-heading{
+				  
+				}
+
+.mwp-tabs .mwp-tab-info .mobile{
+  display:none;
+}
+.mwp-tabs .mwp-tab-info .desktop{
+  display:block;
+}
+
+
+/* ----------- iPhone 4 and 4S ----------- */
+
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+  .form-container .part1 .radio-button-container .radio-card.radio-card-margin, .part3 .radio-button-container .radio-card.radio-card-margin{
+    margin-top:20px;
+  }
+  .form-container .part1 .radio-button-container, .part3 .radio-button-container{
+    margin-top:64px;
+  }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+
+
+/* ----------- iPhone 6 ----------- */
+
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+  .form-container .part1 .radio-button-container .radio-card.radio-card-margin, .part2 .radio-button-container .radio-card.radio-card-margin{
+    margin-top:20px;
+  }
+  .form-container .part1 .radio-button-container, .part3 .radio-button-container{
+    margin-top:80px;
+  }
+  .form-container .part2{
+    top:120px;
+   }
+   .form-container .part2 [class*=col-]{
+      padding:10px;
+   }
+   .mwp-tabs .mwp-tab-info .mobile{
+     display:block;
+   }
+   .mwp-tabs .mwp-tab-info .desktop{
+    display:none;
+   }
+   .public-private .public, .private	{
+	  padding: 10px;
+	}
+	.public-private .public strong, .private strong{
+	  font-size:1.5em;
+	}
+	.public-private .public span.icon-box, .private span.icon-box{
+    width: 40px;
+    height: 40px;
+    font-size: 1.5em;
+	padding: 2px 7px 0px 16px;
+	line-height: normal;
+	}
+	.public-private .public span.icon-box::before{		      
+	  top: 1px;
+	  left: 6px;	
+	}
+	.public-private  .private span.icon-box::before{
+	  top: 1px;
+	  left: 7px;
+	}
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+  .form-container .part1 .radio-button-container .radio-card.radio-card-margin, .part3 .radio-button-container .radio-card.radio-card-margin{
+    margin-left:20px;
+	margin-top:0px;
+  }
+  .form-container .part1 .radio-button-container, .part3 .radio-button-container{
+    margin-top:35px;
+  }
+   .form-container .part2{
+    top:50px;
+   }
+   .form-container .part2 [class*=col-]{
+      padding:6px;
+   }
+   .back-btn{
+     font-size:1.8em;
+   }
+   .mwp-tabs .mwp-tab-info .mobile{
+     display:block;
+   }
+   .mwp-tabs .mwp-tab-info .desktop{
+    display:none;
+   }
+   .public-private .public, .private	{
+	  padding: 10px;
+	}
+	.public-private .public strong, .private strong{
+	  font-size:1.5em;
+	}
+	.public-private .public span.icon-box, .private span.icon-box{
+    width: 40px;
+    height: 40px;
+    font-size: 1.5em;
+	padding: 2px 7px 0px 16px;
+	line-height: normal;
+	}
+	.public-private .public span.icon-box::before{		      
+	  top: 1px;
+	  left: 6px;	
+	}
+	.public-private  .private span.icon-box::before{
+	  top: 1px;
+	  left: 7px;
+	}
+}
+
+/* ----------- iPhone 5 and 5S ----------- */
+
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+  .form-container .part1 .radio-button-container .radio-card.radio-card-margin, .part3 .radio-button-container .radio-card.radio-card-margin{
+    margin-top:20px;
+  }
+  .form-container .part1 .radio-button-container, .part3 .radio-button-container{
+    margin-top:34px;
+  }
+  .form-container .part2{
+    top:40px;
+   }
+   .form-container .part2 [class*=col-]{
+      padding:10px;
+   }
+   .back-btn{
+     font-size:1.8em;
+   }
+   .mwp-tabs .mwp-tab-info .mobile{
+     display:block;
+   }
+   .mwp-tabs .mwp-tab-info .desktop{
+    display:none;
+   }
+   .public-private .public, .private	{
+	  padding: 10px;
+	}
+	.public-private .public strong, .private strong{
+	  font-size:1.5em;
+	}
+	.public-private .public span.icon-box, .private span.icon-box{
+    width: 40px;
+    height: 40px;
+    font-size: 1.5em;
+	padding: 2px 7px 0px 16px;
+	line-height: normal;
+	}
+	.public-private .public span.icon-box::before{		      
+	  top: 1px;
+	  left: 6px;	
+	}
+	.public-private  .private span.icon-box::before{
+	  top: 1px;
+	  left: 7px;
+	}
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (orientation: landscape) {
+  .form-container .part1 .radio-button-container .radio-card.radio-card-margin, .part3 .radio-button-container .radio-card.radio-card-margin{
+    margin-top:10px;
+	margin-left:89px;
+  }
+  .form-container .part1 .radio-button-container, .part3 .radio-button-container{
+    margin-top:0px;
+  }
+  .form-container .part2{
+    top:40px;
+   }
+   .form-container .part2 [class*=col-]{
+      padding:10px;
+   }
+   .back-btn{
+     font-size:1.8em;
+   }
+   .mwp-tabs .mwp-tab-info .mobile{
+     display:block;
+   }
+   .mwp-tabs .mwp-tab-info .desktop{
+    display:none;
+   }
+   .public-private .public, .private	{
+	  padding: 10px;
+	}
+	.public-private .public strong, .private strong{
+	  font-size:1.5em;
+	}
+	.public-private .public span.icon-box, .private span.icon-box{
+    width: 40px;
+    height: 40px;
+    font-size: 1.5em;
+	padding: 2px 7px 0px 16px;
+	line-height: normal;
+
+	}
+	.public-private .public span.icon-box::before{		      
+	  top: 1px;
+	  left: 6px;	
+	}
+	.public-private  .private span.icon-box::before{
+	  top: 1px;
+	  left: 7px;
+	}
+}
+
+/* ----------- iPhone 6+ ----------- */
+
+
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+  .form-container .part1 .radio-button-container .radio-card.radio-card-margin, .part3 .radio-button-container .radio-card.radio-card-margin{
+	margin-top:20px;
+  }
+  .form-container .part1 .radio-button-container, .part3 .radio-button-container{
+    margin-top:110px;
+  }
+  .form-container .part2{
+    top:120px;
+   }
+   .form-container .part2 [class*=col-]{
+      padding:10px;
+   }
+   .back-btn{
+     font-size:2em;
+   }
+   .mwp-tabs .mwp-tab-info .mobile{
+     display:block;
+   }
+   .mwp-tabs .mwp-tab-info .desktop{
+    display:none;
+   }
+   .public-private .public, .private	{
+	  padding: 10px;
+	}
+	.public-private .public strong, .private strong{
+	  font-size:1.5em;
+	}
+	.public-private .public span.icon-box, .private span.icon-box{
+    width: 40px;
+    height: 40px;
+    font-size: 1.5em;
+	padding: 2px 7px 0px 16px;
+	line-height: normal;
+
+	}
+	.public-private .public span.icon-box::before{		      
+	  top: 1px;
+	  left: 6px;	
+	}
+	.public-private  .private span.icon-box::before{
+	  top: 1px;
+	  left: 7px;
+	}
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+  .form-container .part1 .radio-button-container .radio-card.radio-card-margin, .part3 .radio-button-container .radio-card.radio-card-margin{
+    margin-left:20px;
+	margin-top:0px;
+  }
+  .form-container .part1 .radio-button-container, .part3 .radio-button-container{
+    margin-top:35px;
+  }
+   .form-container .part2{
+    top:65px;
+   }
+   .form-container .part2 [class*=col-]{
+      padding:5px 10px;
+   }
+   .back-btn{
+     font-size:1.8em;
+   }
+   .mwp-tabs .mwp-tab-info .mobile{
+     display:block;
+   }
+   .mwp-tabs .mwp-tab-info .desktop{
+    display:none;
+   }
+   .public-private .public, .private	{
+	  padding: 10px;
+	}
+	.public-private .public strong, .private strong{
+	  font-size:1.5em;
+	}
+	.public-private .public span.icon-box, .private span.icon-box{
+    width: 40px;
+    height: 40px;
+    font-size: 1.5em;
+	padding: 2px 7px 0px 16px;
+	line-height: normal;
+
+	}
+	.public-private .public span.icon-box::before{		      
+	  top: 1px;
+	  left: 6px;	
+	}
+	.public-private  .private span.icon-box::before{
+	  top: 1px;
+	  left: 7px;
+	}
+}
+
+/* ----------- Galaxy S5 ----------- */
+
+/* Portrait */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: portrait) {
+  .form-container .part1 .radio-button-container .radio-card.radio-card-margin, .part3 .radio-button-container .radio-card.radio-card-margin{
+	margin-top:20px;
+  }
+  .form-container .part1 .radio-button-container, .part3 .radio-button-container{
+    margin-top:70px;
+  }
+  .form-container .part2{
+     top: 47px;
+   }
+   .form-container .part2 [class*=col-]{
+      padding:10px;
+   }
+   .back-btn{
+     font-size:1.8em;
+   }
+   .mwp-tabs .mwp-tab-info .mobile{
+     display:block;
+   }
+   .mwp-tabs .mwp-tab-info .desktop{
+    display:none;
+   }
+   .public-private .public, .private	{
+	  padding: 10px;
+	}
+	.public-private .public strong, .private strong{
+	  font-size:1.5em;
+	}
+	.public-private .public span.icon-box, .private span.icon-box{
+    width: 40px;
+    height: 40px;
+    font-size: 1.5em;
+	padding: 2px 7px 0px 16px;
+	line-height: normal;
+
+	}
+	.public-private .public span.icon-box::before{		      
+	  top: 1px;
+	  left: 6px;	
+	}
+	.public-private  .private span.icon-box::before{
+	  top: 1px;
+	  left: 7px;
+	}
+}
+
+/* Landscape */
+/* Not working */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: landscape) {
+  .form-container .part1 .radio-button-container .radio-card.radio-card-margin, .part3 .radio-button-container .radio-card.radio-card-margin{
+	margin-top:20px;
+  }
+  .form-container .part1 .radio-button-container, .part3 .radio-button-container{
+    margin-top:60px;
+  }
+  .form-container .part2{
+    top:70px;
+   }
+   .form-container .part2 [class*=col-]{
+      padding:10px;
+   }
+   .mwp-tabs .mwp-tab-info .mobile{
+     display:block;
+   }
+   .mwp-tabs .mwp-tab-info .desktop{
+    display:none;
+   }
+   .public-private .public, .private	{
+	  padding: 10px;
+	}
+	.public-private .public strong, .private strong{
+	  font-size:1.5em;
+	}
+	.public-private .public span.icon-box, .private span.icon-box{
+    width: 40px;
+    height: 40px;
+    font-size: 1.5em;
+	padding: 2px 7px 0px 16px;
+	line-height: normal;
+
+	}
+	.public-private .public span.icon-box::before{		      
+	  top: 1px;
+	  left: 6px;	
+	}
+	.public-private  .private span.icon-box::before{
+	  top: 1px;
+	  left: 7px;
+	}
+}
+
+/* ----------- HTC One ----------- */
+/* Need to test on phn*/
+/* Portrait */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: portrait) {
+}
+
+/* Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: landscape) {
+
+}
+
+/* ----------- iPad mini ----------- */
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+ .form-container .part1 .radio-button-container .radio-card.radio-card-margin, .part3 .radio-button-container .radio-card.radio-card-margin{
+	margin-left:30px;
+	margin-top:0px;
+  }
+  .form-container .part1 .radio-button-container, .part3 .radio-button-container{
+    margin-top:350px;
+  }
+  .form-container .part2{
+    top:300px;
+   }
+   .form-container .part2 [class*=col-]{
+      padding:20px 10px;
+   }
+   .back-btn{
+     font-size:2em;
+   }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+  .form-container .part1 .radio-button-container .radio-card.radio-card-margin, .part3 .radio-button-container .radio-card.radio-card-margin{
+	margin-left:30px;
+	margin-top:0px;
+  }
+  .form-container .part1 .radio-button-container, .part3 .radio-button-container{
+    margin-top:220px;
+  }
+ 
+  .form-container .part2{
+    top:200px;
+   }
+   .form-container .part2 [class*=col-]{
+      padding:20px 10px;
+   }
+   .back-btn{
+     font-size:1.8em;
+   }
+}
+/* -----------  Nexus 5X ----------- */
+
+
+/* Portrait */
+@media screen 
+  and (device-width: 412px) 
+  and (device-height: 732px) 
+  and (orientation: portrait) {
+  .form-container .part1 .radio-button-container .radio-card.radio-card-margin, .part3 .radio-button-container .radio-card.radio-card-margin{
+	margin-top:20px;
+  }
+  .form-container .part1 .radio-button-container, .part3 .radio-button-container{
+    margin-top:75px;
+  }
+   .form-container .part2{
+    top:80px;
+   }
+   .form-container .part2 [class*=col-]{
+      padding:10px;
+   }
+   .back-btn{
+     font-size:1.8em;
+   }
+   .mwp-tabs .mwp-tab-info .mobile{
+     display:block;
+   }
+   .mwp-tabs .mwp-tab-info .desktop{
+    display:none;
+   }
+   .public-private .public, .private	{
+	  padding: 10px;
+	}
+	.public-private .public strong, .private strong{
+	  font-size:1.5em;
+	}
+	.public-private .public span.icon-box, .private span.icon-box{
+    width: 40px;
+    height: 40px;
+    font-size: 1.5em;
+	padding: 2px 7px 0px 16px;
+	line-height: normal;
+
+	}
+	.public-private .public span.icon-box::before{		      
+	  top: 1px;
+	  left: 6px;	
+	}
+	.public-private  .private span.icon-box::before{
+	  top: 1px;
+	  left: 7px;
+	}
+}
+
+/* Landscape */
+@media screen 
+  and (device-width: 732px) 
+  and (device-height: 412px) 
+  and (orientation: landscape) {
+  .form-container .part1 .radio-button-container .radio-card.radio-card-margin, .part3 .radio-button-container .radio-card.radio-card-margin{
+	margin-left:30px;
+	margin-top:0px;
+  }
+  .form-container .part1 .radio-button-container, .part3 .radio-button-container{
+    margin-top:40px;
+  }
+   .form-container .part2{
+    top:50px;
+   }
+   .form-container .part2 [class*=col-]{
+      padding:6px;
+   }
+   .back-btn{
+     font-size:1.8em;
+   }
+   .mwp-tabs .mwp-tab-info .mobile{
+     display:block;
+   }
+   .mwp-tabs .mwp-tab-info .desktop{
+    display:none;
+   }
+   .public-private .public, .private	{
+	  padding: 10px;
+	}
+	.public-private .public strong, .private strong{
+	  font-size:1.5em;
+	}
+	.public-private .public span.icon-box, .private span.icon-box{
+    width: 40px;
+    height: 40px;
+    font-size: 1.5em;
+	padding: 2px 7px 0px 16px;
+	line-height: normal;
+
+	}
+	.public-private .public span.icon-box::before{		      
+	  top: 1px;
+	  left: 6px;	
+	}
+	.public-private  .private span.icon-box::before{
+	  top: 1px;
+	  left: 7px;
+	}
+}
+
+/* ----------- Non-Retina Screens ----------- */
+@media only screen and (min-width:1400px){
+  .form-container, .view-container{
+  width:1200px;
+  margin:auto;
+}
+}
+@media screen 
+  and (min-device-width: 1200px) 
+ { 
+
+
+   .back-btn .btn-text{
+     display:inline;
+   }
+   .form-container .part1 {
+    top: 47px;
+   }
+    .form-container .part3 {
+    top: 47px;
+   }
+    .form-container .part2 label input[type=text]{
+     font-size:1.2em;
+   }
+   .form-container .part2 label  textarea{
+     font-size:1.2em;
+   }
+   .form-container .part2 ::-webkit-input-placeholder {
+     color: rgba(89, 28, 182, 0.46);
+      font-size:1em;
+   }
+  .form-container .part1 .radio-button-container .radio-card.radio-card-margin, .part3 .radio-button-container .radio-card.radio-card-margin{
+	margin-left:20px;
+	margin-top:0px;
+  }
+  .form-container .part1 .radio-button-container, .part3 .radio-button-container{
+    margin-top:165px;
+  }
+  
+  
+
+  @media screen 
+  and (max-width: 603px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+   .form-container .part2 label input[type=text]{
+     font-size:1em;
+   }
+   .form-container .part2 label  textarea{
+     font-size:1em;
+   }
+  .form-container .part2 ::-webkit-input-placeholder {
+    color: rgba(89, 28, 182, 0.46);
+    font-size:1em;
+  }
+  .form-container .part1 .radio-button-container .radio-card.radio-card-margin, .part3 .radio-button-container .radio-card.radio-card-margin{
+	margin-left:16.66%;
+	margin-top:20px;
+  }
+  .form-container .part1 .radio-button-container, .part3 .radio-button-container{
+    margin-top:65px;
+  }
+    .form-container .part2{
+    top:80px;
+   }
+   .form-container .part2 [class*=col-]{
+      padding:10px;
+   }
+   .mwp-tabs .mwp-tab-info .mobile{
+     display:block;
+   }
+   .mwp-tabs .mwp-tab-info .desktop{
+    display:none;
+   }
+   .public-private .public, .private	{
+	  padding: 10px;
+	}
+	.public-private .public strong, .private strong{
+	  font-size:1.5em;
+	}
+	.public-private .public span.icon-box, .private span.icon-box{
+    width: 40px;
+    height: 40px;
+    font-size: 1.5em;
+	padding: 2px 7px 0px 16px;
+	line-height: normal;
+
+	}
+	.public-private .public span.icon-box::before{		      
+	  top: 1px;
+	  left: 6px;	
+	}
+	.public-private  .private span.icon-box::before{
+	  top: 1px;
+	  left: 7px;
+	}
+}
+  @media screen 
+  and (min-width: 603px) and (max-width:993px)
+  and (-webkit-min-device-pixel-ratio: 1) { 
+  .form-container .part1 {
+    top: 47px;
+   }
+   .form-container .part3 {
+    top: 47px;
+   }
+   .form-container .part2 label input[type=text]{
+     font-size:1em;
+   }
+   .form-container .part2 label  textarea{
+     font-size:1em;
+   }
+  .form-container .part2 ::-webkit-input-placeholder {
+    color: rgba(89, 28, 182, 0.46);
+    font-size:1em;
+  }
+  .mwp-tabs .mwp-tab-info .mobile{
+     display:block;
+   }
+   .mwp-tabs .mwp-tab-info .desktop{
+    display:none;
+   }
+   .public-private .public, .private	{
+	  padding: 10px;
+	}
+	.public-private .public strong, .private strong{
+	  font-size:1.5em;
+	}
+	.public-private .public span.icon-box, .private span.icon-box{
+    width: 40px;
+    height: 40px;
+    font-size: 1.5em;
+	padding: 2px 7px 0px 16px;
+	line-height: normal;
+
+	}
+	.public-private .public span.icon-box::before{		      
+	  top: 1px;
+	  left: 6px;	
+	}
+	.public-private  .private span.icon-box::before{
+	  top: 1px;
+	  left: 7px;
+	}
+}
+  @media screen 
+  and (min-width: 993px) and (max-width:1200px)
+{ 
+   .form-container .part1 {
+    top: 47px;
+   }
+     .form-container .part3 {
+    top: 47px;
+   }
+}
