@@ -101,7 +101,7 @@
 }
 .notification-container{
   position:fixed;
-  z-index:12;
+  z-index:1033;
   bottom:10px;
   left:0;
   width:100%;
