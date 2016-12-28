@@ -1,6 +1,6 @@
 .form-body{
   
-  background-color: #531eaa;
+  //background-color: #531eaa;
   position: relative;
 	width: 100%;
 	height: 100%;
@@ -10,14 +10,14 @@
 }
 .landing--above {
 	z-index: 200;
-	 background: url(../images/menubg.svg) center center no-repeat fixed;
-	  background-color: #531eaa;
+	 background: url('../images/patterns.jpg');
+	 // background-color: #531eaa;
      position: absolute;
 	 //position: relative;
 	width: 100%;
 	height: 100%;
-	background-repeat: no-repeat;
-	background-size: cover;
+	//background-repeat: no-repeat;
+	//background-size: cover;
 
 }
 .landing--beneath {
@@ -74,17 +74,21 @@
 
 
 .form-container{
-  position: fixed;
-  overflow-x:hidden;
+  //position: fixed;
+  //overflow-x:hidden;
   width: 100%;
   //margin:0 auto;
-  height: 100%;
+  //height: 100%;
 
   z-index: 11;
   top: 0;
   transition:all .5s ease;
   color: #fff;
   text-align: center;
+   //background: url('../images/patterns.jpg');//url(../images/menubg.svg) center center no-repeat fixed;
+	//  background-color: #531eaa;
+	//background-repeat: no-repeat;
+	//background-size: cover;
   
 }
 .view-container{
@@ -188,7 +192,7 @@
    //display:none;
    //left:100%;
    //left:0;
-   position:absolute;
+   //position:relative;
    top: 67px;
   -webkit-transition:all 1s ease;
 }
@@ -201,7 +205,7 @@
     top: -14px;
     right: 2px;
     color: #fff;
-    background: rgba(89, 28, 182, 0.46);
+    background: #531eaa;
     padding: 7.5px;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
@@ -210,10 +214,10 @@
 	cursor:pointer;
 }
 .form-container .part2 label input[type=text]{
-   color:#591cb6;
-   background:#fff;//#fff;
+   color:#531eaa;
+   background:transparent;
    //border-color: transparent transparent transparent transparent;
-   border:2px solid rgba(89, 28, 182, 0.46);
+   border:2px solid #531eaa;
    padding:10px 50px 10px 10px;
    border-radius:5px;
    width:100%;
@@ -223,13 +227,13 @@
    height:80px;
    width:100%;
    padding:10px;
-   border:2px solid rgba(89, 28, 182, 0.46);
-   background:#fff;
-   color: #591cb6;
+   border:2px solid #531eaa;
+   background:transparent;
+   color: #531eaa;
    font-size:1.2em;
 }
 .form-container .part2 ::-webkit-input-placeholder {
-  color: rgba(89, 28, 182, 0.46);
+  color:#a7a7a7;
   font-size:1em;
 }
 .form-container .pagination-container{
@@ -279,7 +283,7 @@
 				  font-size:1.3em;
 				  border-radius:5px;
 				  color:#fff;
-				  background: rgb(179, 150, 221);
+				  background: #531eaa;
 				}
 				.public-private .public.active, .private.active{
 				  background:#28e3cc;
@@ -392,7 +396,7 @@
 .squaredTwo {
 	width: 28px;
 	height: 28px;
-	background: #a686da;
+	background: rgba(255,255,255,0.9);
     float: left;
 	margin: 2px;
 	position: relative;
@@ -405,7 +409,7 @@
 	height: 20px;
 	left: 4px;
 	top: 4px;
-	background: rgb(179, 150, 221);
+	background: #531eaa;
 }
 
 .squaredTwo label:after {
@@ -1011,7 +1015,6 @@
      font-size:1.2em;
    }
    .form-container .part2 ::-webkit-input-placeholder {
-     color: rgba(89, 28, 182, 0.46);
       font-size:1em;
    }
 
@@ -1029,7 +1032,6 @@
      font-size:1em;
    }
   .form-container .part2 ::-webkit-input-placeholder {
-    color: rgba(89, 28, 182, 0.46);
     font-size:1em;
   }
 
@@ -1079,7 +1081,6 @@
      font-size:1em;
    }
   .form-container .part2 ::-webkit-input-placeholder {
-    color: rgba(89, 28, 182, 0.46);
     font-size:1em;
   }
   .mwp-tabs .mwp-tab-info .mobile{

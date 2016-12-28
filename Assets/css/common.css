@@ -210,11 +210,11 @@ input, button:focus {
  // background-size: cover;
  // background-size: cover;
   background-color: #e8e7e7;//#531eaa;
-  z-index: 11;
+  z-index: 1033;
   top: 0;
   right: -80%;
   transition:all .2s ease;
-  color: black;
+  color: #531eaa;
   text-align: center;
 }
 
@@ -225,7 +225,9 @@ input, button:focus {
   color:#fff;
   font-size: 1.5em;
   padding: 76px;
-  background:black;
+  background: url(../images/menubg.svg) center center no-repeat;
+  background-size: cover;
+  background-color: #531eaa;
 }
 
 .menu .close-menu{
@@ -247,6 +249,7 @@ input, button:focus {
   font-size: 1.5em;
   height:75%;
   display:table;
+  padding:0;
 }
 .menu .menu-body ul{
   //display:table-cell;
