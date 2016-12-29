@@ -213,7 +213,7 @@ input, button, textarea:focus {
   top: 0;
   right: -80%;
   transition:all .2s ease;
-  color: #531eaa;
+  color: black;
   text-align: center;
 }
 
@@ -262,13 +262,16 @@ input, button, textarea:focus {
   color:inherit;
 }
 
-.menu .menu-body ul li a:hover{
+/*.menu .menu-body ul li a:hover{
   color:#28e3cc;
 }
 .menu .menu-body ul li a:active{
   color:#28e3cc;
+}*/
+.menu .menu-body ul li:hover{
+  background:#d6d2d2;
 }
-.menu .menu-body ul li a:hover::before{
+/*.menu .menu-body ul li a:hover::before{
   content: "\2022";
   font-size: 40px;
   padding: 0 5px 0 0;
@@ -279,7 +282,7 @@ input, button, textarea:focus {
   font-size: 40px;
   padding: 0 0 0 5px;
   line-height: 22px;
-}		
+}*/		
 
 [class*="col-"] {
   float: left;
