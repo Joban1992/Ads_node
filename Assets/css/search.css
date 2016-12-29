@@ -69,6 +69,7 @@ background: url('../images/patterns.jpg');
 }	
 .search-result-container{
   //background: #f7f7f7;
+  height:94%;
   background: url('../images/patterns.jpg');
 }
 .search-desktop{

@@ -38,6 +38,7 @@ angular.module("app.directive",[]).directive('searchBox', function(){
 	  $scope.openLoginBox = function(){
 	    $scope.$parent.loginActive=true;
 		$scope.$parent.showOverlay = true;
+		
 	  }
 	}
   }

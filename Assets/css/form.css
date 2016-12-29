@@ -1,21 +1,22 @@
 .form-body{
   
   //background-color: #531eaa;
+  background: url('../images/patterns.jpg');
   position: relative;
-	width: 100%;
-	height: 100%;
+	//width: 100%;
+	height: 93%;
 	background-repeat: no-repeat;
 	background-size: cover;
   //overflow:hidden;
 }
 .landing--above {
 	z-index: 200;
-	 background: url('../images/patterns.jpg');
+	 
 	 // background-color: #531eaa;
      position: absolute;
 	 //position: relative;
-	width: 100%;
-	height: 100%;
+	//width: 100%;
+	//height: 100%;
 	//background-repeat: no-repeat;
 	//background-size: cover;
 
@@ -202,34 +203,42 @@
 .form-container .part2 label i{
     position: absolute;
     display: block;
-    top: -14px;
-    right: 2px;
+    top: -13px;
+    right: 1px;
     color: #fff;
-    background: #531eaa;
+    background: #3963a0;
     padding: 7.5px;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
-    padding: 12px 13px 13px 15px;
+    padding: 12px 13px 12px 15px;
     font-size: 1.5em;
 	cursor:pointer;
 }
 .form-container .part2 label input[type=text]{
-   color:#531eaa;
+   /*color:#3963a0;
    background:transparent;
    //border-color: transparent transparent transparent transparent;
-   border:2px solid #531eaa;
+   border:2px solid #3963a0;
    padding:10px 50px 10px 10px;
    border-radius:5px;
    width:100%;
-   font-size:1em;
+   font-size:1em;*/
+       width: 100%;
+    height: 50px;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #ece9e9;
+    background: white;
+    text-indent: 10px;
+    color: #3963a0;
+    font-size: 1.3em;
 }
 .form-container .part2 label  textarea{
-   height:80px;
+   height:160px;
    width:100%;
    padding:10px;
-   border:2px solid #531eaa;
-   background:transparent;
-   color: #531eaa;
+   border: 1px solid #ece9e9;
+   background:#fff;//transparent;
+   color: #3963a0;
    font-size:1.2em;
 }
 .form-container .part2 ::-webkit-input-placeholder {
@@ -279,18 +288,38 @@
 }
 .public-private .public, .private	{
 				  display:block;
-				  padding:12px;
+				  padding:10px;
 				  font-size:1.3em;
 				  border-radius:5px;
-				  color:#fff;
-				  background: #531eaa;
+				  color:#3963a0;
+				  background: #fff;//#3963a0;
+				  position:relative;
+				  border-radius: 5px 0 0 5px;
+    border: 1px solid #ece9e9;
 				}
+.public-private .public.btn, .private.btn{
+    color:#fff;
+	background: #3963a0;
+}
 				.public-private .public.active, .private.active{
 				  background:#28e3cc;
 				}
 				.public-private .public strong, .private strong{
 				  font-size:2em;
 				  margin-left:10px;
+				}
+				.public-private .public i, .private i{
+				      float: right;
+					  color:#fff;
+    font-size: 1.2em;
+    margin: 3px;
+    background: #3963a0;
+    padding: 13px;
+    top: -3px;
+    position: absolute;
+    right: -3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
 				}
 			    .public-private .public span.icon-box, .private span.icon-box{
 					display: inline-block;
@@ -409,13 +438,13 @@
 	height: 20px;
 	left: 4px;
 	top: 4px;
-	background: #531eaa;
+	background: #3963a0;
 }
 
 .squaredTwo label:after {
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 	filter: alpha(opacity=0);
-	opacity: 0;
+	opacity: 0.3;
 	content: '';
 	position: absolute;
 	width: 9px;
@@ -437,7 +466,7 @@
 .squaredTwo label:hover::after {
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
 	filter: alpha(opacity=30);
-	opacity: 0.3;
+	opacity: 0.6;
 }
 .squaredTwo input[type=radio]{
   display:none;

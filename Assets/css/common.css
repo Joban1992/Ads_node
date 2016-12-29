@@ -82,7 +82,8 @@
 body{
   margin: 0;
   background:#eaedf0;
-   font-size: 100%;
+  font-size: 100%;
+
 }
 ul{
  list-style-type:none;
@@ -90,8 +91,6 @@ ul{
  margin: 0;
 }
 .container{
-  height:100%;
-  width:100%;
   padding:0;
   margin:0;
   background: #f7f7f7;
@@ -153,7 +152,7 @@ menu{
 .float-left{
   float:left;
 }
-input, button:focus {
+input, button, textarea:focus {
   outline-width: 0;
 }
 ::-webkit-input-placeholder {
@@ -203,7 +202,7 @@ input, button:focus {
 }	
 
 .menu{
-  position: fixed;
+  position: absolute;
   width: 80%;
   height: 100%;
  // background: url(../images/menubg.svg) center center no-repeat fixed;
@@ -248,7 +247,7 @@ input, button:focus {
 .menu .menu-body{
   font-size: 1.5em;
   height:75%;
-  display:table;
+  //display:table;
   padding:0;
 }
 .menu .menu-body ul{
@@ -344,11 +343,11 @@ input, button:focus {
  padding:15px;
 }
 .container-deactive{
-  left:-28%;
+  left:-40%;
 }
 .menu{
-  width: 30%;
-  right: -30%;
+  width: 40%;
+  right: -40%;
 }
 .menu-active{
  right:0;
@@ -364,7 +363,7 @@ input, button:focus {
   width:50%;
 }
 .menu .menu-title{
-  font-size: 2em;
+  font-size: 1.5em;
 }
 .menu .close-menu{
   top:-36px;
@@ -376,7 +375,7 @@ input, button:focus {
 }
 .menu .menu-body{
   padding:0;
-  font-size:1.8em;
+  font-size:1.5em;
   height:63%;
 }
 .menu .menu-body ul{
@@ -482,7 +481,7 @@ input, button:focus {
 }
 
 .menu .menu-title{
-  font-size: 3em;
+  font-size: 2em;
 }
 .menu .close-menu{
   top:-33px;
@@ -493,7 +492,7 @@ input, button:focus {
 }
 .menu .menu-body{
   padding:0;
-  font-size: 2.5em;
+  font-size: 2em;
   height: 68%;
 }
 .menu .menu-body ul{
@@ -503,58 +502,7 @@ input, button:focus {
   padding:10px;
 }
 }
-@media (max-device-width:736px) and (orientation:landscape) {
-.menu .menu-title{
-  padding:37px;
-  
-}
-.menu .close-menu{
-  top:-20px;
-  
-}
-.menu .close-menu i.icon {
-  font-size: 2em;
-  margin: 26px -10px;
-}
-.menu .menu-title{
-  font-size: 1.7em;
-}
-.menu .menu-body{
-      padding: 0;
-    font-size: 1.5em;
-    height: 48%;
-}
-.menu .menu-body ul{
-  margin:0;
-}	
-.menu .menu-body ul li{
-   padding:0;
-}	
-}
 
-@media (min-device-width:1024px) and (orientation:landscape) {
-.container-deactive{
-  left:-29%;
-}
-.menu{
-  width: 30%;
-  right: -30%;
-}
-.menu-active{
- right:0;
-}
-.menu .menu-body{
-    padding: 0;
-    font-size: 2em;
-    height: 48%;
-}
-.menu .menu-body ul{
-  margin:0;
-}	
-.menu .menu-body ul li{
-   padding:5px;
-}	
-}
 
 
 /* ----------- iPad mini ----------- */
@@ -565,19 +513,29 @@ input, button:focus {
   and (max-device-width: 1024px) 
   and (orientation: portrait) 
   and (-webkit-min-device-pixel-ratio: 1) {
-.container-deactive{
-  left:-40%;
+     .container-deactive{
+  left:-45%;
 }
 .menu{
- position: absolute;
-  width: 40%;
-  right: -40%;
+ position: fixed;
+  width: 45%;
+  right: -45%;
+}
+.menu .menu-title {
+    font-size: 1.7em;
+	padding:82px;
 }
 .menu-active{
  right:0;
 }
  .menu .close-menu{
-  top:-20px;
+  top:-35px;
+}
+ .menu .menu-body{
+  font-size:1.7em;
+}
+.menu .menu-body ul li{
+    padding: 8px;
 }
 
 }
@@ -589,14 +547,351 @@ input, button:focus {
   and (orientation: landscape) 
   and (-webkit-min-device-pixel-ratio: 1) {
 
- 
-  .form-container .part2{
-    top:200px;
-   }
-   .form-container .part2 [class*=col-]{
-      padding:20px 10px;
-   }
-   .back-btn{
-     font-size:1.8em;
-   }
+     .container-deactive{
+  left:-32%;
+}
+.menu{
+ position: fixed;
+  width: 32%;
+  right: -32%;
+}
+.menu .menu-title {
+    font-size: 1.5em;
+	padding:72px;
+}
+.menu-active{
+ right:0;
+}
+ .menu .close-menu{
+  top:-35px;
+}
+ .menu .menu-body{
+  font-size:1.5em;
+}
+.menu .menu-body ul li{
+    padding: 8px;
+}
+}
+
+
+/* ----------- iPhone 6 ----------- */
+
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+  
+   .container-deactive{
+  left:-42%;
+}
+.menu{
+ position: absolute;
+  width: 42%;
+  right: -42%;
+}
+.menu .menu-title {
+    font-size: 1.3em;
+	padding:52px;
+}
+.menu-active{
+ right:0;
+}
+ .menu .close-menu{
+  top:-20px;
+}
+ .menu .menu-body{
+  font-size:1.3em;
+}
+.menu .menu-body ul li{
+    padding: 8px;
+}
+}
+
+
+/* ----------- iPhone 5 and 5S ----------- */
+
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+      .container-deactive{
+  left:-80%;
+}
+.menu{
+ position: absolute;
+  width: 80%;
+  right: -80%;
+}
+.menu .menu-title {
+    font-size: 1.3em;
+	padding:56px;
+}
+.menu-active{
+ right:0;
+}
+ .menu .close-menu{
+  top:-20px;
+}
+ .menu .menu-body{
+  font-size:1.3em;
+}
+.menu .menu-body ul li{
+    padding: 8px;
+}
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (orientation: landscape) {
+
+   .container-deactive{
+  left:-42%;
+}
+.menu{
+ position: absolute;
+  width: 42%;
+  right: -42%;
+}
+.menu .menu-title {
+    font-size: 1.3em;
+	padding:52px;
+}
+.menu-active{
+ right:0;
+}
+ .menu .close-menu{
+  top:-20px;
+}
+ .menu .menu-body{
+  font-size:1.3em;
+  overflow-y:scroll;
+}
+.menu .menu-body ul li{
+    padding: 8px;
+}
+}
+
+
+
+
+
+/* ----------- iPhone 6+ ----------- */
+
+
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+      .container-deactive{
+  left:-80%;
+}
+.menu{
+ position: absolute;
+  width: 80%;
+  right: -80%;
+}
+.menu .menu-title {
+    font-size: 1.7em;
+	padding:76px;
+}
+.menu-active{
+ right:0;
+}
+ .menu .close-menu{
+  top:-20px;
+}
+ .menu .menu-body{
+  font-size:1.5em;
+}
+.menu .menu-body ul li{
+    padding: 8px;
+}
+}
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+    .container-deactive{
+  left:-32%;
+}
+.menu{
+ position: absolute;
+  width: 32%;
+  right: -32%;
+}
+.menu .menu-title {
+    font-size: 1.3em;
+	padding:52px;
+}
+.menu-active{
+ right:0;
+}
+ .menu .close-menu{
+  top:-20px;
+}
+ .menu .menu-body{
+  font-size:1.3em;
+  overflow-y:scroll;
+}
+.menu .menu-body ul li{
+    padding: 8px;
+}
+}
+
+/* ----------- Galaxy S5 ----------- */
+
+/* Portrait */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: portrait) {
+         .container-deactive{
+  left:-80%;
+}
+.menu{
+ position: absolute;
+  width: 80%;
+  right: -80%;
+}
+.menu .menu-title {
+    font-size: 1.7em;
+	padding:76px;
+}
+.menu-active{
+ right:0;
+}
+ .menu .close-menu{
+  top:-20px;
+}
+ .menu .menu-body{
+  font-size:1.5em;
+}
+.menu .menu-body ul li{
+    padding: 8px;
+}
+
+}
+
+/* Landscape */
+/* Not working */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: landscape) {
+  .container-deactive{
+  left:-32%;
+}
+.menu{
+ position: absolute;
+  width: 32%;
+  right: -32%;
+}
+.menu .menu-title {
+    font-size: 1.3em;
+	padding:52px;
+}
+.menu-active{
+ right:0;
+}
+ .menu .close-menu{
+  top:-20px;
+}
+ .menu .menu-body{
+  font-size:1.3em;
+}
+.menu .menu-body ul li{
+    padding: 8px;
+}
+}
+
+/* -----------  Nexus 5X ----------- */
+
+
+/* Portrait */
+@media screen 
+  and (device-width: 412px) 
+  and (device-height: 732px) 
+  and (orientation: portrait) {
+         .container-deactive{
+  left:-80%;
+}
+.menu{
+ position: absolute;
+  width: 80%;
+  right: -80%;
+}
+.menu .menu-title {
+    font-size: 1.7em;
+	padding:76px;
+}
+.menu-active{
+ right:0;
+}
+ .menu .close-menu{
+  top:-20px;
+}
+ .menu .menu-body{
+  font-size:1.5em;
+}
+.menu .menu-body ul li{
+    padding: 8px;
+}
+
+}
+
+/* Landscape */
+@media screen 
+  and (device-width: 732px) 
+  and (device-height: 412px) 
+  and (orientation: landscape) {
+  .container-deactive{
+  left:-32%;
+}
+.menu{
+ position: absolute;
+  width: 32%;
+  right: -32%;
+}
+.menu .menu-title {
+    font-size: 1.3em;
+	padding:52px;
+}
+.menu-active{
+ right:0;
+}
+ .menu .close-menu{
+  top:-20px;
+}
+ .menu .menu-body{
+  font-size:1.3em;
+}
+.menu .menu-body ul li{
+    padding: 8px;
+}
+
 }
