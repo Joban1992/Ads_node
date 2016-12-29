@@ -229,7 +229,7 @@
     border: 1px solid #ece9e9;
     background: white;
     text-indent: 10px;
-    color: #3963a0;
+    color: black;//#3963a0;
     font-size: 1.3em;
 }
 .form-container .part2 label  textarea{
@@ -238,7 +238,7 @@
    padding:10px;
    border: 1px solid #ece9e9;
    background:#fff;//transparent;
-   color: #3963a0;
+   color: black;//#3963a0;
    font-size:1.2em;
 }
 .form-container .part2 ::-webkit-input-placeholder {
