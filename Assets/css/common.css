@@ -258,6 +258,7 @@ input, button, textarea:focus {
 }
 .menu .menu-body ul li{
   padding: 8px;
+  cursor:pointer;
 }
 .menu .menu-body ul li a{
   text-decoration:none;

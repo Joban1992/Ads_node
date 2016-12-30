@@ -1,5 +1,7 @@
 angular.module('app.controllers').controller('searchCntrl', function($scope, $timeout){
   console.log('search ctrl');
+  $scope.$parent.menuActive = false;
+  $scope.$parent.containerDeactive = false ;
   //$timeout(function(){$scope.$parent.notiText = "Search Page"},0);
   $scope.searchResultFromServer=[
     {

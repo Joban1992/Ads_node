@@ -32,7 +32,7 @@
 	//background: url(../images/menubg.svg) center center no-repeat fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background:#fff;
+	background:#f7f7f7;
 }
 
 .landing--above {
@@ -93,7 +93,7 @@
   
 }
 .view-container{
-  // position: fixed;
+  position: relative;
   //overflow-x:hidden;
   width: 100%;
   margin:0 auto;
@@ -267,12 +267,13 @@
 }
 
 .back-btn{
-   position:absolute;
-   color:#fff;
-   left:10px;
-   top:25px;
-   text-decoration:none;
-   font-size:1.2em;
+  position: absolute;
+  color:#531eaa; 
+  cursor:pointer;
+  left: 21px;
+  top: 20px;
+  text-decoration: none;
+  font-size: 1.5em;
 }
 .back-btn .btn-text{
   display:none;

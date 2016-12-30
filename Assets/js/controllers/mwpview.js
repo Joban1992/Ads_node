@@ -1,7 +1,9 @@
 angular.module('app.controllers').controller('mwpviewCntrl', function($scope, $timeout, $state){
   console.log('mwpviewCntrl ctrl');
   console.log($state.params);
-  $scope.showHideLoader = false;
+  $scope.showHideLoader = true;
+  $scope.$parent.menuActive = false;
+  $scope.$parent.containerDeactive = false ;
   
   //Preview : json data structure for PREVIEW
   //Get this data for search result from server
@@ -35,7 +37,9 @@ angular.module('app.controllers').controller('mwpviewCntrl', function($scope, $t
 		 }
 	   ]
 	}
-  //$timeout(function(){$scope.showHideLoader = false;},2000);
+    $scope.mwpTabs = $scope.dataFromServer.tabs;
+	$scope.activeTab = $scope.mwpTabs[0];
+    $timeout(function(){$scope.showHideLoader = false;},2000);
   
   $scope.togglePreview = function(){
     $state.go('template.search');
