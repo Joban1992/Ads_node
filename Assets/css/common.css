@@ -426,7 +426,7 @@ input, button, textarea:focus {
   left:-23%;
 }
 .sub-container{
-  height:100%;
+  height:auto;
  }
 .menu{
   width: 24%;
