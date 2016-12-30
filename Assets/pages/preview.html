@@ -1,6 +1,69 @@
 
 <div class="row view-container" style="background:#fff;display:">
-	    <a  ng-click="toggleFun()" class="back-btn" style="color:#531eaa; cursor:pointer;"><i class="icon ion-log-in"></i> <span class="btn-text">Back</span></a>
+    <div class="col-l12 col-m12 col-s12 view-title">
+	   Preview #1234
+	</div>
+	<style>
+	  details summary{
+	    color: #fff;
+		padding: 5px;
+		font-size: 1.3em;
+		background: #818a91;
+		outline:none;
+		margin-top:10px;
+	  }
+	  details p{
+	    margin:0;
+		padding:10px;
+	  }
+	  
+	</style>
+	<div class="col-l12 col-m12 col-s12" style="padding:0 15px">
+	  <details id="details" ng-open="true">
+        <summary style="margin:0;">Basic</summary>
+		  <p>  
+		    Name : Joban
+		 </p>
+		 <p>  
+		    Heading : Some Heading
+		 </p>
+		 <p>  
+		    Description : Sed risus feugiat fusce eu sit conubia venenatis aliquet nisl cras eu adipiscing ac cras at sem cras per senectus eu parturient quam.
+		 </p>
+      </details>
+	  
+	  <details id="details" ng-open="true">
+        <summary>Contact</summary>
+		<p>  
+		   Email : jjjjjpreet@gmail.com
+		</p>
+		<p>  
+		   Phone : 9176176607
+		</p>
+		<p>  
+		   Website : www.joban.com
+		 </p> 
+      </details>
+	  
+	   <details id="details" ng-open="true">
+        <summary>Address</summary>
+		<p>  
+		   Location : Address of that place
+		</p>
+		<p>  
+		   City : Patiala
+		</p>
+		<p>  
+		   Website : www.joban.com
+		 </p> 
+      </details>
+	</div>
+	<div class="col-l12 col-m12 col-s12">
+	  <direction-map addr="data.mapAddress"></direction-map>
+	</div>
+	
+    	
+	    <!--<a  ng-click="toggleFun()" class="back-btn" style="color:#531eaa; cursor:pointer;"><i class="icon ion-log-in"></i> <span class="btn-text">Back</span></a>
 	    <div class="col-l12 col-m12 col-s12 view-title">
 	      Preview #1234
 	    </div>
@@ -41,9 +104,10 @@
 			  <div class="mpw-img">
 			    
 				<!--<direction-map origin="Gurgaon+Haryana,India" destination="Panipat+Haryana,India"></direction-map>-->
-  {{addr}}
-               <direction-map addr="data.mapAddress"></direction-map>
+  
+              <!-- <direction-map addr="data.mapAddress"></direction-map>
 			  </div>
-			</div>
+			</div>-->
+			
 	  </div>
 	  

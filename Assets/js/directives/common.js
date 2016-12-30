@@ -167,6 +167,7 @@ angular.module("app.directive",[]).directive('searchBox', function(){
 	},
 	templateUrl:'Assets/pages/preview.html',
 	controller:function($scope){
+	 console.log('p cntrl ')
 	  console.log($scope.data,'sdsdsd')
 	  $scope.dataFromServer = $scope.data;
 	  $scope.mwpTabs = $scope.dataFromServer.tabs;

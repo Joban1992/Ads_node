@@ -1,7 +1,7 @@
 angular.module('app.controllers').controller('mwpviewCntrl', function($scope, $timeout, $state){
   console.log('mwpviewCntrl ctrl');
   console.log($state.params);
-  $scope.showHideLoader = true;
+  $scope.showHideLoader = false;
   
   //Preview : json data structure for PREVIEW
   //Get this data for search result from server
@@ -35,7 +35,7 @@ angular.module('app.controllers').controller('mwpviewCntrl', function($scope, $t
 		 }
 	   ]
 	}
-  $timeout(function(){$scope.showHideLoader = false;},2000);
+  //$timeout(function(){$scope.showHideLoader = false;},2000);
   
   $scope.togglePreview = function(){
     $state.go('template.search');

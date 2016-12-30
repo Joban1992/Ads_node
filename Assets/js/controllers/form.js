@@ -40,6 +40,7 @@ angular.module('app.controllers').controller('formCntrl', function($scope, $time
   }
   
   $scope.togglePreview = function(){
+    $scope.preview = $scope.preview?false:true;
     if($scope.layoutToggle){
 	  $scope.layoutToggle = false;
 	}else{

@@ -27,7 +27,7 @@ angular.module("app").config(function($stateProvider, $urlRouterProvider){
   .state('template.mwpview',{
     url:'/view',
 	params:{id:null},
-	template:'<loader ng-if="showHideLoader"></loader> <preview toggle="togglePreview()" data="dataFromServer"></preview>',
+	template:'<loader ng-if="showHideLoader"></loader><header-bar></header-bar> <preview toggle="togglePreview()" data="dataFromServer"></preview>',
 	controller:'mwpviewCntrl'
   })
   .state('template.login',{
