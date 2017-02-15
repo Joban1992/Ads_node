@@ -7,6 +7,7 @@ var app = function () {
   app.use(express.static(__dirname+'/'));
   //app.engine('html', require('ejs').renderFile);
   app.get('*', function(req, res) {
+    console.log(res);
     res.sendfile('./index.html');
   });
 
