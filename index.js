@@ -8,7 +8,7 @@ var app = function () {
   //app.engine('html', require('ejs').renderFile);
   app.get('*', function(req, res) {
     console.log(res);
-    res.sendfile('./index.html');
+    //res.sendfile('./index.html');
   });
 
   return app;
